@@ -58,6 +58,17 @@ body {
     border: 1px solid black !important;
 }
 
+.bg-black {
+    background: #445261;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
