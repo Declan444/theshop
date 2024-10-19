@@ -11,15 +11,30 @@
 
 {% block content %}
     <div class="container h-100">
-        <div class="row h-100 d-flex center-content">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font text-black d-none d-md-block">
-                    
-                </h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-                    </h4>
+        <div class="row h-100">
+            <div class="col-12 col-lg-6 my-auto">
+                <div class="shop-now-container">
+                    <h1 class="display-4 logo-font text-black">
+                        <!-- Your main heading here -->
+                    </h1>
+                    <div class="my-5">
+                        <h4>
+                            <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 my-auto">
+                <div class="weekly-bargain-container">
+                    <h2 class="text-center mb-4">Weekly Bargain</h2>
+                    <div class="weekly-bargain-content">
+                        <img src="{% static 'shop/media/biarritz-lab-4_jpg.webp' %}" alt="Weekly Bargain Item" class="img-fluid mb-3">
+                        <h3 class="text-center">Biarritz Saddle</h3>
+                        <p class="text-center">Special offer: 200 Euro (Save 30%)</p>
+                        <div class="text-center">
+                            <a href="" class="btn btn-primary">Shop Now</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
