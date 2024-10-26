@@ -89,7 +89,7 @@ body {
 }
 
 
-.weekly-bargain-container {
+.weekly-bargain-wrapper {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 30px; 
@@ -101,7 +101,7 @@ body {
     margin-right: auto;
 }
 
-.weekly-bargain-container h2 {
+.weekly-bargain-content h2 {
     color: #445261;
     font-weight: bold;
     text-transform: uppercase;
@@ -116,7 +116,7 @@ body {
 }
 
 .weekly-bargain-content p {
-    color: #26bb48;  
+    color: #445261;  
     margin-bottom: 10px;
 }
 

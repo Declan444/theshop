@@ -2,41 +2,48 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-12 col-lg-6 my-auto">
-                <div class="shop-now-container">
-                    <h1 class="display-4 logo-font text-black">
-                        <!-- Your main heading here -->
-                    </h1>
-                    <div class="my-5">
-                        <h4>
-                            <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-                        </h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-6 my-auto">
-                <div class="weekly-bargain-container">
-                    <h2 class="text-center mb-4">Weekly Bargain</h2>
-                    <div class="weekly-bargain-content">
-                        <img src="{% static 'media/Lug-IG-Main.png' %}" alt="Weekly Bargain Item" class="img-fluid mb-3">
-                        <h3 class="text-center">Lugnaquilla</h3>
-                        <p class="text-center">Special offer: 124 Euro (Save 30%)</p>
-                        <div class="text-center">
-                            <a href="" class="btn btn-primary">Shop Now</a>
-                        </div>
-                    </div>
+<div class="container h-100">
+    <div class="row h-100">
+        <div class="col-12 col-lg-6 my-auto">
+            <div class="shop-now-container">
+                <h1 class="display-4 logo-font text-black">
+                    <!-- Your main heading here -->
+                </h1>
+                <div class="my-5">
+                    <h4>
+                        <a href="{% url 'products' %}"
+                            class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+                    </h4>
                 </div>
             </div>
         </div>
+        <div class="col-12 col-lg-6 my-auto">
+            
+            {% if weekly_bargain %}
+            <div class="weekly-bargain-wrapper p-4 ">
+                <div class="weekly-bargain-content">
+                    <h2 class="text-center">Weekly Bargain</h2>
+                    <img src="{{ weekly_bargain.image.url }}" alt="{{ weekly_bargain.name }}" class="img-fluid mb-3">
+                    <h3 class="text-center">{{ weekly_bargain.name }}</h3>
+                    <p class="text-center">{{ weekly_bargain.description }}</p>
+                    <p class="text-center">Special offer: {{ weekly_bargain.price }} Euro</p>
+                    <div class="text-center">
+                        <a href="{% url 'product_detail' weekly_bargain.id %}" class="btn btn-primary">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <p class="text-center">Check back next week for a new bargain!</p>
+            {% endif %}
+        </div>
     </div>
+</div>
 {% endblock %}
