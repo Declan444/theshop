@@ -156,6 +156,8 @@ body {
         visibility: visible;
         box-shadow: none;
     }
+
+   
 }
 
 /* -------------------------------- Media Queries */
@@ -190,5 +192,35 @@ body {
 @media (min-width: 992px) {
     .shop-now-container, .weekly-bargain-container {
         margin-bottom: 20px;
+    }
+}
+
+@media (max-width:991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}
+
+@media (max-width:456px) {
+    .header-container {
+        padding-top: 146px;
+    }
+
+    body {
+        height: calc(100vh - 146px);
+    }
+}
+
+@media (max-width:370px) {
+    .header-container {
+        padding-top: 210px;
+    }
+
+    body {
+        height: calc(100vh - 210px);
     }
 }
