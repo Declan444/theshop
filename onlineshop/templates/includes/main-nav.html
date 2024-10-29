@@ -17,10 +17,10 @@
                 Horseware
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="Horseware">
-                <a href="" class="dropdown-item">Saddles</a>
-                <a href="" class="dropdown-item">Bridles</a>
-                <a href="" class="dropdown-item">Covers</a>
-                <a href="" class="dropdown-item">Extras</a>
+                <a href="{% url 'products' %}?category=Saddles" class="dropdown-item">Saddles</a>
+                <a href="{% url 'products' %}?category=Bridles" class="dropdown-item">Bridles</a>
+                <a href="{% url 'products' %}?category=Covers" class="dropdown-item">Covers</a>
+                <a href="{% url 'products' %}?category=Extras" class="dropdown-item">Extras</a>
             </div>
         </li>
 
@@ -29,9 +29,9 @@
                 Riderware
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="riderware-link">
-                <a href="" class="dropdown-item">Helmets</a>
-                <a href="" class="dropdown-item">Jackets</a>
-                <a href="" class="dropdown-item">Boots</a>
+                <a href="{% url 'products' %}?category=Helmets" class="dropdown-item">Helmets</a>
+                <a href="{% url 'products' %}?category=Jackets" class="dropdown-item">Jackets</a>
+                <a href="{% url 'products' %}?category=Boots" class="dropdown-item">Boots</a>
             </div>
         </li>
 
@@ -40,10 +40,9 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Products</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=New_Products" class="dropdown-item">New Products</a>
+                <a href="{% url 'products' %}?category=Deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=Clearance" class="dropdown-item">Clearance</a>
             </div>
         </li>
     </ul>
