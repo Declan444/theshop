@@ -143,6 +143,25 @@ body {
     z-index: -1;
 }
 
+/* button on products page to bring back to the top */
+.btt-button {
+    height: 32px;
+    width: 32px;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0; 
+    border-radius: 50%;       
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 991px) {

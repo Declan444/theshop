@@ -112,5 +112,14 @@
         </div>
     </div>
 </div>
+<div class="btt-button shadow-sm rounded-circle border border-black">
+    <a class="btt-link">
+        <i class="fas fa-arrow-up text-black"></i>
+    </a>
+</div>
+{% endblock %}
 
+{% block postloadjs %}
+    {{ block.super }}
+    <script src="{% static 'js/sort.js' %}"></script>
 {% endblock %}
