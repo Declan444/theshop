@@ -29,8 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-!j9z%l1$y!v)1rm=9l09wi-t#48xho5+p=ys(t4t5y$-^io=9j"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
+DEBUG = True
 ALLOWED_HOSTS = ["127.0.0.1", "equestrian-online-a728dbfb5f33.herokuapp.com"]
 
 
@@ -49,6 +48,7 @@ INSTALLED_APPS = [
     "allauth.socialaccount",
     "shop",
     "products",
+    'shopping_bag',
 ]
 
 MIDDLEWARE = [

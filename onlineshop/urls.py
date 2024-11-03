@@ -9,6 +9,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', include('shop.urls')),
     path('products/', include('products.urls')),
+    path('shopping_bag/', include('shopping_bag.urls')),
 ] 
 # serving media files
 if settings.DEBUG:
