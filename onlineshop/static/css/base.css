@@ -162,6 +162,13 @@ body {
     cursor: pointer;
 }
 
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: #445261;
+    color: white !important;
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 991px) {
