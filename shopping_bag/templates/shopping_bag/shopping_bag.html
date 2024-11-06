@@ -21,7 +21,6 @@
         </div>
         <div class="row">
             <div class="col">
-                {% if shopping_bag_items %}
                     <div class="table-responsive rounded">
                         <table class="table table-sm table-borderless">
                             <thead class="text-black">
@@ -41,17 +40,17 @@
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                                    <p class="my-0 small text=muted">SKU: {{ item.product.sku|upper }}</p>
+                                    <p class="my-0"><strong>Size:</strong> {% if item.size %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
+                                    <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0">Euro {{ item.product.price }}</p>   
+                                    <p class="my-0">Euro {{ item.product.price|floatformat:2 }}</p>   
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0">{{ item.quantity }}</p>                                  
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0">Euro {{ item.product.price }}</p>
-                                    
+                                    <p class="my-0">Euro {{ item.quantity|floatformat:2 }}</p> <!-- Ensure this is the calculated subtotal -->
                                 </td>
                             </tr>
                             {% endfor %}
@@ -62,7 +61,7 @@
                                     <h4 class="mt-4"><strong>Grand Total: Euro {{ grand_total|floatformat:2 }}</strong></h4>
                                     {% if free_delivery_delta > 0 %}
                                     <p class="mb-1 text-danger">
-                                        You could get free delivery by spending just <strong>{{ free_delivery_delta }}</strong> more!
+                                        You could get free delivery by spending just <strong>{{ free_delivery_delta|floatformat:2 }}</strong> more!
                                     </p>
                                     {% endif %}
                                 </td>
