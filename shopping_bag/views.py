@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, HttpResponse, get_object
 from django.contrib import messages
 from products.models import Products
 from django.http import JsonResponse 
+from products.models import Products
 
 
 def view_shopping_bag(request):
@@ -16,6 +17,7 @@ def add_to_shopping_bag(request, item_id):
     Add a product quantity to the shopping bag.
     Supports items with or without sizes.
     """
+    product = Products.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity', 1)) 
     redirect_url = request.POST.get('redirect_url')
     size = request.POST.get('product_size')  
@@ -38,6 +40,7 @@ def add_to_shopping_bag(request, item_id):
             bag[item_id] += quantity
         else:
             bag[item_id] = quantity
+            messages.success(request, f'Added {product.name} to your shopping bag' )
 
     # Save updated bag in session
     request.session['bag'] = bag

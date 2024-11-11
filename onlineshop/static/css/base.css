@@ -170,7 +170,21 @@ body {
     background: #445261;
     color: white !important;
 }
+/* Toast CSS */
+.message-container {
+    position: fixed;
+    top: 729x;
+    right: 15px;
+    z-index: 9999999;
+}
 
+.custom-toast {
+    overflow: visible;
+}
+
+.toast_capper {
+    height: 2px;
+}
 
 /* Responsive adjustments */
 @media (max-width: 991px) {
