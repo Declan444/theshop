@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ["127.0.0.1", "equestrian-online-a728dbfb5f33.herokuapp.com"]
 
 
@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     "products",
     'shopping_bag',
     'checkout',
+    # Other
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -66,6 +68,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "onlineshop.urls"
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
@@ -80,8 +84,13 @@ TEMPLATES = [
                 "django.template.context_processors.request",  # required by allauth
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                'django.template.context_processors.media',
                 'shopping_bag.contexts.shopping_bag_contents',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
