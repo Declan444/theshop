@@ -12,7 +12,8 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta name="csrf-token" content="{{ csrf_token }}">
-    {% endblock %} {% block extra_meta %} {% endblock %} {% block corecss %}
+    {% endblock %} {% block extra_meta %} {% endblock %}
+     {% block corecss %}
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -26,7 +27,8 @@
       href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap"
     />
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
-    {% endblock %} {% block extra_css %} {% endblock %} {% block corejs %}
+    {% endblock %} {% block extra_css %} {% endblock %} 
+    {% block corejs %}
     <script
       src="https://kit.fontawesome.com/511d1b0e01.js"
       crossorigin="anonymous"
@@ -41,6 +43,8 @@
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
       crossorigin="anonymous"
     ></script>
+    <!-- Stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
     {% endblock %} {% block extra_js %} {% endblock %}
 
     <title>My Online Shop {% block extra_title %}{% endblock %}</title>
