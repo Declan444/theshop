@@ -1,18 +1,19 @@
-{% extends "templates/base.html" %}
-{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block head_title %}{% endblock %}</title>
+    {% block extra_head %}
+    {% endblock %}
+  </head>
+  <body>
+    {% block body %}
 
-{% block head_title %}{% endblock %}
-
-{% block extra_head %}
-{% endblock %}
-
-{% block content %}
     {% if messages %}
     <div>
       <strong>Messages:</strong>
       <ul>
         {% for message in messages %}
-        <li>{{ message }}</li>
+        <li>{{message}}</li>
         {% endfor %}
       </ul>
     </div>
@@ -30,9 +31,10 @@
         {% endif %}
       </ul>
     </div>
-    {% block inner_content %}
+    {% block content %}
     {% endblock %}
-{% endblock %}
-
-{% block extra_body %}
-{% endblock %}
+    {% endblock %}
+    {% block extra_body %}
+    {% endblock %}
+  </body>
+</html>
