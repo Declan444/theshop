@@ -420,6 +420,15 @@ input[name='q']::placeholder  {
         padding: .25rem .5rem !important;
     }
 }
+/* review page styling */
+.review-container {
+    max-width: 600px; /* Limits the width of the form */
+    margin-top: 250px;
+    padding: 20px;
+    background-color: #f8f9fa; /* Optional: Light background for contrast */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for a polished look */
+}
 
 @media (max-width:456px) {
     .header-container {

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5 style=margin-top: 120px">
+    <h2>Site Reviews</h2>
+    {% for review in reviews %}
+        <div class="review mb-4">
+            <h4>{{ review.title }}</h4>
+            <p><strong>Rating:</strong> {{ review.rating }}/5</p>
+            <p>{{ review.content }}</p>
+            <small>By {{ review.user.username }} on {{ review.created_at|date:"d M Y" }}</small>
+        </div>
+        <hr>
+    {% empty %}
+        <p>No reviews yet. Be the first to leave one!</p>
+    {% endfor %}
+</div>
+{% endblock %}

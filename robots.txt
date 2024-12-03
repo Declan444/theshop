@@ -1,0 +1,4 @@
+User-agents: *
+Disallow: /admin/
+Disallow: /accounts/
+Sitemap: https://equestrian-online-a728dbfb5f33.herokuapp.com/
