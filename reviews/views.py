@@ -37,7 +37,7 @@ def delete_review(request, review_id):
     if request.method == 'POST':
         review.delete()
         messages.success(request, 'Your review has been deleted successfully.')
-        return redirect('reviews')  # Redirect to the reviews page
+        return redirect('reviews')  
 
     template = 'reviews/delete_review.html'
     context = {'review': review}
