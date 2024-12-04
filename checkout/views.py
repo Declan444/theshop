@@ -176,9 +176,13 @@ def checkout_success(request, order_number):
     if 'shopping_bag' in request.session:
         del request.session['shopping_bag']
 
-    template = 'checkout/checkout_success.html'
     context = {
         'order': order,
     }
 
-    return render(request, template, context)
+    return render(request, 'checkout/checkout_success.html', context)
+
+    #template = 'checkout/checkout_success.html'
+    
+
+    #return render(request, template, context)

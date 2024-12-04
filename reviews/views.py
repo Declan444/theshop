@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Review
@@ -14,7 +14,7 @@ def submit_review(request):
             review.user = request.user
             review.save()
             messages.success(request, 'Thank you for your review!')
-            return redirect('reviews')  # Redirect to the reviews page
+            return redirect('reviews')  
     else:
         form = ReviewForm()
     
@@ -27,4 +27,18 @@ def reviews(request):
     reviews = Review.objects.all().order_by('-created_at')
     template = 'reviews/reviews.html'
     context = {'reviews': reviews}
+    return render(request, template, context)
+
+@login_required
+def delete_review(request, review_id):
+    """Allows a user to delete their own review."""
+    review = get_object_or_404(Review, id=review_id, user=request.user)
+
+    if request.method == 'POST':
+        review.delete()
+        messages.success(request, 'Your review has been deleted successfully.')
+        return redirect('reviews')  # Redirect to the reviews page
+
+    template = 'reviews/delete_review.html'
+    context = {'review': review}
     return render(request, template, context)

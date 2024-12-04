@@ -1,17 +1,32 @@
 {% extends "base.html" %}
+{% load static %}
+
 {% block content %}
-<div class="container mt-5 style=margin-top: 120px">
-    <h2>Site Reviews</h2>
-    {% for review in reviews %}
-        <div class="review mb-4">
-            <h4>{{ review.title }}</h4>
-            <p><strong>Rating:</strong> {{ review.rating }}/5</p>
-            <p>{{ review.content }}</p>
-            <small>By {{ review.user.username }} on {{ review.created_at|date:"d M Y" }}</small>
+<div class="review-comment-container my-5 py-5"> <!-- Added padding to push content -->
+    <h1 class="text-center mb-4">User Reviews</h1>
+    <div class="review-container p-4 mx-auto">
+        <div class="row mt-lg-5"> <!-- Adds top margin specifically for large screens -->
+            {% for review in reviews %}
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body custom-border">
+                        <h5 class="card-title">{{ review.title|default:"No Title" }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">by {{ review.user.username }}</h6>
+                        <p class="card-text">{{ review.content|truncatewords:20 }}</p>
+                        <p class="card-text"><strong>Rating:</strong> {{ review.rating }}/5</p>
+                        <p class="card-text"><small class="text-muted">{{ review.created_at|date:"M d, Y" }}</small></p>
+                        {% if review.user == request.user %}
+                        <a href="{% url 'delete_review' review.id %}" class="btn btn-danger btn-sm mt-2">Delete</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12">
+                <p class="text-center">No reviews yet. Be the first to write one!</p>
+            </div>
+            {% endfor %}
         </div>
-        <hr>
-    {% empty %}
-        <p>No reviews yet. Be the first to leave one!</p>
-    {% endfor %}
+    </div>
 </div>
 {% endblock %}

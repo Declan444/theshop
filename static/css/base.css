@@ -420,14 +420,53 @@ input[name='q']::placeholder  {
         padding: .25rem .5rem !important;
     }
 }
+/* review card body */
+/* Push the content down from the header */
+.review-comment-container {
+    margin-top: 100px; /* Adjust to match your header height */
+    padding-top: 20px;
+}
+
+/* Align the outline with the background */
+.review-container {
+    background-color: #ffffff; /* White background */
+    border: 2px solid #445261; /* Outline color */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a slight shadow */
+    max-width: 1200px; /* Optional: Center with a max width */
+}
+
+/* Style individual card bodies */
+.custom-border {
+    border: 1px solid #445261; /* Border color */
+    border-radius: 5px; /* Optional: Slight rounding for the card */
+    padding: 20px; /* Space inside the card */
+}
+
+/* Adjust spacing for mobile and large screens */
+@media (min-width: 992px) {
+    .review-comment-container {
+        margin-top: 120px; /* Extra margin for large screens */
+    }
+}
+
+
 /* review page styling */
 .review-container {
     max-width: 600px; /* Limits the width of the form */
-    margin-top: 250px;
+    margin-top: 10px;
     padding: 20px;
-    background-color: #f8f9fa; /* Optional: Light background for contrast */
+    background-color: #f0f3f7; /* Optional: Light background for contrast */
     border-radius: 10px; /* Optional: Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for a polished look */
+}
+
+.btn-primary {
+    color: #445261; 
+}
+/* delete confirmation message */
+.delete-container {
+    margin-top: 300px !important; 
 }
 
 @media (max-width:456px) {
