@@ -469,6 +469,11 @@ input[name='q']::placeholder  {
     margin-top: 300px !important; 
 }
 
+/* Loyalty style */
+.loyalty-container {
+    margin-top: 100px; 
+}
+
 @media (max-width:456px) {
     .header-container {
         padding-top: 146px;

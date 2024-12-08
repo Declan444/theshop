@@ -3,6 +3,7 @@ from django.db import models
 from django.db.models import Sum
 from django.conf import settings
 from django_countries.fields import CountryField
+from loyalty.models import LoyaltyPoints
 
 from products.models import Products
 from profiles.models import UserProfile
@@ -45,6 +46,18 @@ class Order(models.Model):
             self.delivery_cost = 0
         self.grand_total = self.order_total + self.delivery_cost
         self.save()
+
+    def award_loyalty_points(self):
+        """Award loyalty points based on the total amount spent in the order."""
+        loyalty_points, created = LoyaltyPoints.objects.get_or_create(user=self.user_profile.user)
+        loyalty_points.add_points(self.grand_total)
+
+    def save(self, *args, **kwargs):
+        """Override the save method to award loyalty points after saving the order."""
+        if not self.order_number:
+            self.order_number = self._generate_order_number()
+        super().save(*args, **kwargs)
+        self.award_loyalty_points()  # Award points after saving the order
 
     def save(self, *args, **kwargs):
         """

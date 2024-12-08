@@ -14,6 +14,7 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
     path('reviews/', include('reviews.urls')),
+    path('loyalty/', include('loyalty.urls'))
 ] 
 # serving media files
 if settings.DEBUG:

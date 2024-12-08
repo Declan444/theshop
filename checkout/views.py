@@ -18,8 +18,8 @@ def cache_checkout_data(request):
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
-            'bag': json.dumps(request.session.get('shopping_bag', {})),
-            'save_info': require_POST.get('save_info'),
+            'bag': json.dumps(request.session.get('bag', {})),
+            'save_info': request.POST.get('save_info'),
             'username': request.user,
         })
         return HttpResponse(status=200)
@@ -36,7 +36,7 @@ def checkout(request):
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
     if request.method == 'POST':
-        bag = request.session.get ('shopping_bag', {})
+        bag = request.session.get ('bag', {})
 
         form_data = {
             'full_name': request.POST['full_name'],
@@ -65,7 +65,7 @@ def checkout(request):
                             order=order,
                             product=product,
                             quantity=item_data,
-                            product_size=size,
+                            product_size= None,
                         )
                         order_line_item.save()
                     else:
