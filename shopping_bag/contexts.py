@@ -4,6 +4,7 @@ from django.shortcuts import get_object_or_404
 from products.models import Products
 
 
+
 def shopping_bag_contents(request):
 
     shopping_bag_items =[]
@@ -55,3 +56,6 @@ def shopping_bag_contents(request):
     }
 
     return context
+
+
+

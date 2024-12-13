@@ -15,7 +15,12 @@
                         <p class="card-text">{{ review.content|truncatewords:20 }}</p>
                         <p class="card-text"><strong>Rating:</strong> {{ review.rating }}/5</p>
                         <p class="card-text"><small class="text-muted">{{ review.created_at|date:"M d, Y" }}</small></p>
+                        
                         {% if review.user == request.user %}
+                        <!-- Edit Button -->
+                        <a href="{% url 'edit_review' review.id %}" class="btn btn-primary btn-sm mt-2 custom-edit-btn">Edit</a>
+                        
+                        <!-- Delete Button -->
                         <a href="{% url 'delete_review' review.id %}" class="btn btn-danger btn-sm mt-2">Delete</a>
                         {% endif %}
                     </div>

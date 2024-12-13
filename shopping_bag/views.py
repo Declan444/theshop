@@ -2,11 +2,27 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.http import JsonResponse
 from products.models import Products
+from loyalty.models import LoyaltyPoints
 
 def view_shopping_bag(request):
     """
     A view to display the shopping bag
     """
+
+    bag = request.session.get('bag', {})
+    loyalty_points = None
+
+    if request.user.is_authenticated:
+        try:
+            from loyalty.models import LoyaltyPoints
+            loyalty_points = LoyaltyPoints.objects.get(user=request.user)
+        except LoyaltyPoints.DoesNotExist:
+            loyalty_points = LoyaltyPoints.objects.create(user=request.user, points=0)
+
+    context = {
+        'bag': bag,
+        'loyalty_points': loyalty_points,
+    }
     return render(request, 'shopping_bag/shopping_bag.html')
 
 

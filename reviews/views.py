@@ -42,3 +42,21 @@ def delete_review(request, review_id):
     template = 'reviews/delete_review.html'
     context = {'review': review}
     return render(request, template, context)
+
+@login_required
+def edit_review(request, review_id):
+    """Allows a user to edit their own review."""
+    review = get_object_or_404(Review, id=review_id, user=request.user)  
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, instance=review)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your review has been updated successfully.')
+            return redirect('reviews')  
+    else:
+        form = ReviewForm(instance=review)
+
+    template = 'reviews/edit_review.html'
+    context = {'form': form, 'review': review}
+    return render(request, template, context)

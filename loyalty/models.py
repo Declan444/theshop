@@ -1,4 +1,3 @@
-# loyalty/models.py
 from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
@@ -13,21 +12,34 @@ class LoyaltyPoints(models.Model):
 
     def add_points(self, amount_spent):
         """Adds points based on the amount spent."""
-        points_earned = int(amount_spent)  # 1 point per 1 unit of currency 
+        try:
+            points_earned = int(amount_spent)
+            if points_earned < 0:
+                raise ValueError("Amount spent cannot be negative")
+        except (ValueError, TypeError):
+            raise ValueError("Invalid amount spent value")
+
         self.points += points_earned
         self.save()
 
     def redeem_points(self, points_to_redeem):
         """Reduces points after redemption, ensuring the user has enough."""
+        if points_to_redeem < 0:
+            raise ValueError("Points to redeem cannot be negative")
         if self.points >= points_to_redeem:
             self.points -= points_to_redeem
             self.save()
             return True
-        return False
+        else:
+            raise ValueError("Insufficient points to redeem")
 
 # Create/update LoyaltyPoints when a new User is created
 @receiver(post_save, sender=User)
 def create_or_update_user_loyalty_points(sender, instance, created, **kwargs):
     if created:
         LoyaltyPoints.objects.create(user=instance)
-    instance.loyaltypoints.save()
+    elif not hasattr(instance, 'loyaltypoints'):
+        LoyaltyPoints.objects.create(user=instance)
+    else:
+        instance.loyaltypoints.save()
+

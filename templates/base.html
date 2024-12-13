@@ -109,7 +109,7 @@
                   <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                 {% endif %}
                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                <a href="{% url 'loyalty_points' %}">Loyalty Points</a>
+                <a href="{% url 'loyalty_points' %}" class="dropdown-item" >Loyalty Points</a>
                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
               {% else %}
                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -162,7 +162,7 @@
         </div>
       </div>
     </header>
-
+    <main>
     {% if messages %}
       <div class="message-container">
         {% for message in messages %}
@@ -187,6 +187,51 @@
     {% block content %} 
 
     {% endblock %} 
+  </main>
+  <footer class="custom-white font-weight-bold width-100 py-3">
+    <div class="container-lg">
+        <div class="row mx-auto">
+            <div class="col-md-4 mt-md-0 pb-2">
+                <p class="text-center mb-0">
+                    <a href="" target="_blank" class="footer-link custom-white text-decoration-none"
+                        aria-label="Link to Frequently Asked Questions, opens in a new tab">FAQ</a><br>
+                    <a href="" target="_blank"
+                        class="footer-link custom-white text-decoration-none"
+                        aria-label="Link to Privacy Policy, opens in a tab">Privacy Policy</a>
+                </p>
+            </div>
+            <div class="col text-center">
+                <p class="mb-0"><i class="custom-white fa-solid fa-phone"></i> +353 111111111</p>
+                <p class="mb-0"><i class="custom-blue fa-solid fa-envelope"></i> info@equestrianonline.com</p>
+            </div>
+            <div class="col-md-4 mt-2 mt-md-0">
+                <div class="text-center">
+                    <p class="custom-blue mb-0">All Rights Reserved 2024<span
+                            class="custom-font custom-red font-weight-normal pl-2">Equestrian Online</span>
+                        <a href="https://www.facebook.com/profile.php?id=61569843507861" target="_blank"
+                            class="ms-2 text-decoration-none" aria-label="Link to Facebook, opens in a new tab"><i
+                                class="footer-link custom-white ml-1 fa-brands fa-facebook"></i>
+                        </a>
+                    </p>
+                    <div class="opening-hours font-montserrat custom-white mb-0">
+                        <p class="custom-blue mb-0 pt-2">Created by <span
+                                class="custom-font custom-red font-weight-normal pr-2">Declan Lenahan</span>
+                            <a href="https://github.com/declan444" target="_blank" class="ms-2 text-decoration-none"
+                                aria-label="Link to Github, opens in a new tab"><i
+                                    class="footer-link custom-blue fa-brands fa-github"></i>
+                            </a>
+                            <a href="" target="_blank"
+                                class="ms-2 text-decoration-none"
+                                aria-label="Link to Linkedin, opens in a new tab"><i
+                                    class="footer-link custom-blue fa-brands fa-linkedin"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
     {% block postloadjs %} 
     <script type="text/javascript">
       $('.toast').toast('show');

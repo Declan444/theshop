@@ -49,8 +49,9 @@ class Order(models.Model):
 
     def award_loyalty_points(self):
         """Award loyalty points based on the total amount spent in the order."""
-        loyalty_points, created = LoyaltyPoints.objects.get_or_create(user=self.user_profile.user)
-        loyalty_points.add_points(self.grand_total)
+        if self.user_profile and self.user_profile.user:
+            loyalty_points, created = LoyaltyPoints.objects.get_or_create(user=self.user_profile.user)
+            loyalty_points.add_points(self.grand_total)
 
     def save(self, *args, **kwargs):
         """Override the save method to award loyalty points after saving the order."""
@@ -59,14 +60,6 @@ class Order(models.Model):
         super().save(*args, **kwargs)
         self.award_loyalty_points()  # Award points after saving the order
 
-    def save(self, *args, **kwargs):
-        """
-        Override the original save method to set the order number
-        if it hasn't been set already.
-        """
-        if not self.order_number:
-            self.order_number = self._generate_order_number()
-        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.order_number

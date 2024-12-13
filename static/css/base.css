@@ -95,7 +95,7 @@ body {
     padding: 30px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 200px;
     max-width: 300px; 
     margin-left: auto;
     margin-right: auto;
@@ -438,9 +438,9 @@ input[name='q']::placeholder  {
 
 /* Style individual card bodies */
 .custom-border {
-    border: 1px solid #445261; /* Border color */
-    border-radius: 5px; /* Optional: Slight rounding for the card */
-    padding: 20px; /* Space inside the card */
+    border: 1px solid #445261; 
+    border-radius: 5px; 
+    padding: 20px; 
 }
 
 /* Adjust spacing for mobile and large screens */
@@ -470,8 +470,65 @@ input[name='q']::placeholder  {
 }
 
 /* Loyalty style */
-.loyalty-container {
-    margin-top: 100px; 
+/* Center the container vertically and horizontally */
+.loyalty-points-container {
+    max-width: 500px; 
+    margin: 50px auto; 
+    padding: 20px; 
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+    margin-top: 200px;
+
+}
+
+/* Footer styling */
+footer.custom-white {
+    background-color: #445261; 
+    
+    width: 100%; 
+    z-index: 1000;
+    color: white; 
+    border-top: 1px solid #ccc;
+    margin-top: auto; 
+}
+
+/* Ensure footer is pushed down with flexbox layout */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    margin: 0; 
+}
+
+/* Main content area */
+main {
+    flex: 1; /* Makes the main content area grow to fill available space */
+}
+
+.custom-edit-btn {
+    background-color: #445261 !important; 
+    border-color: #445261 !important;    
+    color: white !important;            
+}
+
+.custom-edit-btn:hover {
+    background-color: white !important; 
+    border-color: #445261 !important;
+    color: black !important;
+}
+
+
+
+/* Footer link styling */
+footer.custom-white .footer-link {
+    color: white;
+    text-decoration: none; 
+}
+
+footer.custom-white .footer-link:hover {
+    text-decoration: underline; 
 }
 
 @media (max-width:456px) {

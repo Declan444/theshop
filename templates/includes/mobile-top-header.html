@@ -20,6 +20,7 @@
         </form>
     </div>
 </li>
+
 <li class="list-inline-item dropdown">
     <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
@@ -50,7 +51,25 @@
                 {% else %}
                     $0.00
                 {% endif %}
-            </p>
+            </p>            
         </div>
     </a>
 </li>
+                {% if user.is_authenticated %}
+                <li>
+                     
+                    Loyalty Points: 
+                    {% if loyalty_points is not None %}
+                        <strong>{{ loyalty_points }}</strong>
+                    {% else %}
+                        <strong>0</strong>
+                    {% endif %}
+            {% endif %}
+                </li>
+
+        
+            
+            
+                
+        
+    
