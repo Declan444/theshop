@@ -11,7 +11,7 @@ class Review(models.Model):
     content = models.TextField(blank=True, null=True)  
     rating = models.PositiveIntegerField(
         validators=[MinValueValidator(1), MaxValueValidator(5)]
-    )  # Rating between 1 and 5
+    ) 
     created_at = models.DateTimeField(auto_now_add=True, db_index=True)  
 
     class Meta:

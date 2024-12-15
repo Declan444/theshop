@@ -95,7 +95,7 @@ body {
     padding: 30px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 200px;
     max-width: 300px; 
     margin-left: auto;
     margin-right: auto;
@@ -163,6 +163,11 @@ body {
 .remove-item {
     cursor: pointer;
 }
+
+input[name='q']::placeholder  {
+    color: #445261;
+}
+
 
 .btn-outline-black:hover,
 .btn-outline-black:active,
@@ -237,6 +242,87 @@ body {
     overflow-y: auto;
 }
 
+/* Alllauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    color: #445261;
+}
+
+.allauth-form-inner-content {
+    border-color: #343a40;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #445261;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #000;
+    border: 1px solid #000;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+	color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+.allauth-form-inner-content a {
+	color: #17a2b8; /* text-info */
+}
+
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
 
 /* Responsive adjustments */
 @media (max-width: 991px) {
@@ -297,6 +383,152 @@ body {
     body {
         height: calc(100vh - 116px);
     }
+
+    .display-4.logo-font.tex-black {
+        font-size: 2rem;
+    }
+
+    .nav-link {
+        padding: 0.01rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+    #delivery-banner h4 {
+        font-size: .9rem;
+    }
+
+    .btn.btn-outline-black.rounded-0,
+    .btn.btn-black.rounded-0 {
+        padding: .375rem .375rem;
+    }
+
+    .btn.btn-outline-black.rounded-0.btn-lg,
+    .btn.btn-black.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: .25rem .5rem !important;
+    }
+}
+/* review card body */
+/* Push the content down from the header */
+.review-comment-container {
+    margin-top: 100px; 
+    padding-top: 20px;
+}
+
+/* Align the outline with the background */
+.review-container {
+    background-color: #ffffff; 
+    border: 2px solid #445261; 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    max-width: 1200px; 
+}
+
+/* Style individual card bodies */
+.custom-border {
+    border: 1px solid #445261; 
+    border-radius: 5px; 
+    padding: 20px; 
+}
+
+/* Adjust spacing for mobile and large screens */
+@media (min-width: 992px) {
+    .review-comment-container {
+        margin-top: 120px; 
+    }
+}
+
+
+/* review page styling */
+.review-container {
+    max-width: 600px; 
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #f0f3f7; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.btn-primary {
+    color: #445261; 
+}
+/* delete confirmation message */
+.delete-container {
+    margin-top: 300px !important; 
+}
+
+/* Loyalty style */
+/* Center the container vertically and horizontally */
+.loyalty-points-container {
+    max-width: 500px; 
+    margin: 50px auto; 
+    padding: 20px; 
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+    margin-top: 200px;
+
+}
+
+/* Footer styling */
+footer.custom-white {
+    background-color: #445261; 
+    
+    width: 100%; 
+    z-index: 1000;
+    color: white; 
+    border-top: 1px solid #ccc;
+    margin-top: auto; 
+}
+
+/* Ensure footer is pushed down with flexbox layout */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    margin: 0; 
+}
+
+/* Main content area */
+main {
+    flex: 1; /* Makes the main content area grow to fill available space */
+}
+
+.custom-edit-btn {
+    background-color: #445261 !important; 
+    border-color: #445261 !important;    
+    color: white !important;            
+}
+
+.custom-edit-btn:hover {
+    background-color: white !important; 
+    border-color: #445261 !important;
+    color: black !important;
+}
+
+
+
+/* Footer link styling */
+footer.custom-white .footer-link {
+    color: white;
+    text-decoration: none; 
+}
+
+footer.custom-white .footer-link:hover {
+    text-decoration: underline; 
 }
 
 @media (max-width:456px) {

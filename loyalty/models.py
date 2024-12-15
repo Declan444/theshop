@@ -11,14 +11,18 @@ class LoyaltyPoints(models.Model):
         return f"{self.user.username} - {self.points} points"
 
     def add_points(self, amount_spent):
-        """Adds points based on the amount spent."""
+        """Adds points based on the amount spent. 1 euro = 0.1 points."""
         try:
-            points_earned = int(amount_spent)
-            if points_earned < 0:
+            amount_spent = float(amount_spent)  
+            if amount_spent < 0:
                 raise ValueError("Amount spent cannot be negative")
         except (ValueError, TypeError):
             raise ValueError("Invalid amount spent value")
 
+        # Calculate points earned: 1 euro = 0.1 points
+        points_earned = amount_spent * 0.1
+
+        # Add the earned points to the user's balance
         self.points += points_earned
         self.save()
 

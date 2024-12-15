@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.http import JsonResponse
 from products.models import Products
-from loyalty.models import LoyaltyPoints
+
 
 def view_shopping_bag(request):
     """
@@ -11,17 +11,19 @@ def view_shopping_bag(request):
 
     bag = request.session.get('bag', {})
     loyalty_points = None
+    
 
     if request.user.is_authenticated:
+        from loyalty.models import LoyaltyPoints
         try:
-            from loyalty.models import LoyaltyPoints
             loyalty_points = LoyaltyPoints.objects.get(user=request.user)
         except LoyaltyPoints.DoesNotExist:
             loyalty_points = LoyaltyPoints.objects.create(user=request.user, points=0)
 
     context = {
         'bag': bag,
-        'loyalty_points': loyalty_points,
+        'loyalty_points': loyalty_points.points if loyalty_points else 0,  # Pass only the points
+        
     }
     return render(request, 'shopping_bag/shopping_bag.html')
 
@@ -90,7 +92,7 @@ def adjust_shopping_bag(request, item_id):
             messages.success(request, f'Removed {product.name} from the shopping bag.')
 
     request.session['bag'] = bag
-    return redirect(reverse("view_shopping"))
+    return redirect('shopping_bag:view_shopping_bag')
 
 
 def remove_from_shopping_bag(request, item_id):

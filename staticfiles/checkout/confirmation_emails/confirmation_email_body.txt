@@ -1,0 +1,15 @@
+Hello {{ order.ful_name }}
+
+Test text goes here for the body of the email
+
+Order Number: {{ order.order_number }}
+Date: {{ order.date }}
+Order Total: {{ order.order_total }}
+Delivery: {{ order.delivery_cost }}
+Grand Total : {{ order.grand_total }}
+
+Street Address {{ order.street_address }}
+Town {{ order.town_or_city }}
+
+Phone Number: {{ order.phone_number }}
+Contact Email: {{ contact_email}}

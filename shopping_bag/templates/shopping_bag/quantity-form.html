@@ -1,4 +1,4 @@
-<form class="form update-form" method="POST" action="{% url 'adjust_shopping_bag' item.item_id %}">
+<form class="form update-form" method="POST" action="{% url 'shopping_bag:adjust_shopping_bag' item.item_id %}">
     {% csrf_token %}
     <div class="form-group">
         <div class="input-group input-gropu-{{ item.item_id }}">
