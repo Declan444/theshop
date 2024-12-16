@@ -462,7 +462,7 @@ input[name='q']::placeholder  {
 }
 
 .btn-primary {
-    color: #445261; 
+    color: white; 
 }
 /* delete confirmation message */
 .delete-container {
