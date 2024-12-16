@@ -485,12 +485,12 @@ input[name='q']::placeholder  {
 
 /* Footer styling */
 footer.custom-white {
-    background-color: #445261; 
+    background-color: #445261 !important; 
     
     width: 100%; 
     z-index: 1000;
-    color: white; 
-    border-top: 1px solid #ccc;
+    color: white !important; 
+    border-top: 1px solid #ccc !important;
     margin-top: auto; 
 }
 
