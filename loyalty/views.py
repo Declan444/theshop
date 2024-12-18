@@ -42,7 +42,7 @@ def apply_loyalty_points(request):
         loyalty_points.save()
 
         messages.success(request, f"{points_to_apply} loyalty points applied successfully!")
-        return redirect('shopping_bag:view_shopping_bag')
+        return redirect('checkout')
     
     messages.error(request, "Invalid request method.")
-    return redirect('shopping_bag:view_shopping_bag')
+    return redirect('checkout')

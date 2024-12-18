@@ -100,6 +100,10 @@
                             <div class="loyalty-points-section">
                                 <p>You have <strong>{{ loyalty_points }}</strong> loyalty points available.</p>
                                 <p>These points are worth: <strong>€{{ loyalty_points|floatformat:2 }}</strong></p>
+                                <!-- Warning Message -->
+                                <div class="alert alert-warning" role="alert">
+                                    <strong>Important:</strong> If you apply your loyalty points but do not complete the order, the points will be lost, as session details are deleted for security reasons.
+                                </div>
                                 <form method="POST" action="{% url 'apply_loyalty_points' %}">
                                     {% csrf_token %}
                                     <input type="hidden" name="points" value="{{ loyalty_points }}">

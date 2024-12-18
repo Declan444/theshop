@@ -462,7 +462,7 @@ input[name='q']::placeholder  {
 }
 
 .btn-primary {
-    color: #445261; 
+    color: white; 
 }
 /* delete confirmation message */
 .delete-container {
@@ -485,12 +485,12 @@ input[name='q']::placeholder  {
 
 /* Footer styling */
 footer.custom-white {
-    background-color: #445261; 
+    background-color: #445261 !important; 
     
     width: 100%; 
     z-index: 1000;
-    color: white; 
-    border-top: 1px solid #ccc;
+    color: white !important; 
+    border-top: 1px solid #ccc !important;
     margin-top: auto; 
 }
 
@@ -519,6 +519,65 @@ main {
     color: black !important;
 }
 
+/* Contact Form styling */
+
+.custom-contact-btn {
+    background-color: #445261 !important; 
+    border-color: #445261 !important;    
+    color: white !important;            
+}
+
+.custom-contact-btn:hover {
+    background-color: white !important; 
+    color: #445261 !important;
+}
+
+/* Form wrapper styling */
+.contact-form-wrapper {
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Added spacing to move form further down */
+}
+
+/* Message field styling */
+textarea {
+    height: 100px !important; /* Smaller height for the message area */
+    resize: vertical;        /* Allow resizing only vertically */
+}
+
+/* Adjust form margins to fit nicely inside the wrapper */
+.contact-form {
+    margin: 0; /* Remove default margins inside the wrapper */
+}
+
+/* Ensure the form is positioned properly under the header */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content from the top */
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 20px; /* Adjust to give space between the header and form */
+}
+
+/* Optional: To add some spacing between the form and other elements */
+.contact-form {
+    margin-top: 20px;
+}
+
+/* Optional: Header title spacing adjustments */
+.page-title {
+    margin-bottom: 20px; /* Adds spacing below the title */
+}
+
+/* Add space for larger screens (above 995px) */
+@media (min-width: 996px) {
+    .container {
+        margin-top: 100px; /* Adjust this value to create enough space below the navbar */
+    }
+}
 
 
 /* Footer link styling */

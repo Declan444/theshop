@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}Contact Success{% endblock %}
+
+{% block content %}
+<div class="contact-container mt-3 mx-auto">
+    <div class="row mx-auto py-2 h-100">
+        <div class="col-12 text-center my-auto">
+            <section class="contact-section custom-font text-white mx-auto p-2">
+                <p>Thank you for contacting us! Your message has been submitted successfully.</p>
+                <p>We will be in touch shortly.</p>
+            </section>
+        </div>
+        <div class="col-12 text-center mt-3">
+            <a href="/" class="custom-contact-btn btn rounded-0 my-2" aria-label="Back to Homepage">
+                <span class="icon mr-2">
+                    <i class="fas fa-home"></i>
+                </span>
+                <span class="font-weight-bold text-uppercase">Return to Home</span>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

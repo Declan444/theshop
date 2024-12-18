@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}Contact Us{% endblock %}
+
+{% block content %}
+<div class="contact-container pt-3">
+    <div class="row mx-auto py-2">
+        <div class="col-12 col-md-6 text-center mx-auto my-auto">
+            <h1 class="page-title custom-font text-white mx-auto p-2">Contact Us</h1>
+        </div>
+        <div class="col-12 col-md-10 col-xl-8 mx-auto mt-4"> <!-- Added mt-4 to move form below header -->
+            <div class="contact-form-wrapper">
+                <form class="contact-form custom-blue p-3 my-3 mx-2" method="post" action="{% url 'contact' %}">
+                    {% csrf_token %}
+                    {{ form.non_field_errors }}
+                    <div class="form-group">
+                        {{ form.name|as_crispy_field }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.email|as_crispy_field }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.subject|as_crispy_field }} 
+                    </div>
+                    <div class="form-group">
+                        {{ form.message|as_crispy_field }} 
+                    </div>
+                    <div class="account-btn mb-2">
+                        <button class="custom-contact-btn rounded-0 px-2 py-1" type="submit"
+                            aria-label="Submit button">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
