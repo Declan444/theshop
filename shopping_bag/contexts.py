@@ -12,7 +12,10 @@ def shopping_bag_contents(request):
     total = 0
     product_count = 0
     bag = request.session.get('bag', {})
-    points_applied = request.session.get('points_applied', 0)
+    points_applied = Decimal(request.session.get('points_applied', 0))
+    
+
+    
 
     for item_id, item_data in bag.items():
         if isinstance(item_data, int):
@@ -23,6 +26,7 @@ def shopping_bag_contents(request):
                 'item_id': item_id,
                 'quantity': item_data,
                 'product': product,
+                
             })
         else:
             product = get_object_or_404(Products, pk=item_id)
@@ -43,24 +47,23 @@ def shopping_bag_contents(request):
         delivery = 0
         free_delivery_delta = 0
 
-    grand_total = delivery + total
+    grand_total = delivery + total - points_applied
 
-    
-    if request.user.is_authenticated and points_applied > 0:
-        
-        grand_total = max(grand_total - points_applied, 0)
-
+    # Store grand total in session
+    request.session['grand_total'] = float(grand_total)  # Store as float to ensure JSON compatibility
+    request.session.modified = True  # Mark session as modified to save changes
 
     context = {
-        'shopping_bag_items' : shopping_bag_items,
-        'total' : total,
-        'product_count' : product_count,
-        'delivery' : delivery,
-        'free_delivery_delta' : free_delivery_delta,
-        'free_delivery_threshold' : settings.FREE_DELIVERY_THRESHOLD,
-        'grand_total' : grand_total,
+        'shopping_bag_items': shopping_bag_items,
+        'total': total,
+        'product_count': product_count,
+        'delivery': delivery,
+        'free_delivery_delta': free_delivery_delta,
+        'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
+        'grand_total': grand_total,
         'points_applied': points_applied,
-
+        'loyalty_points': request.user.loyaltypoints.points if request.user.is_authenticated else 0,
+        
     }
 
     return context
