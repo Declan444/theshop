@@ -35,6 +35,12 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
+    points_to_apply = request.session.get('points_applied', 0)  # Get applied points, default to 0 if not set
+    grand_total = request.session.get('grand_total', 0)  # Get grand total, default to 0 if not set
+
+
+    
+
     if request.method == 'POST':
         bag = request.session.get ('bag', {})
 
@@ -134,7 +140,9 @@ def checkout(request):
     context = {
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
-        'client_secret': intent.client_secret
+        'client_secret': intent.client_secret,
+        'points_to_apply': points_to_apply,
+        'grand_total': grand_total,
     }
 
     return render(request, template, context)
@@ -145,6 +153,8 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
+
+    points_to_apply = request.session.get('points_applied', 0)  # Get applied points, default to 0 if not set
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
@@ -178,6 +188,8 @@ def checkout_success(request, order_number):
 
     context = {
         'order': order,
+        'points_to_apply': points_to_apply,
+        
     }
 
     return render(request, 'checkout/checkout_success.html', context)
