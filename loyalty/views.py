@@ -44,13 +44,13 @@ def apply_loyalty_points(request):
         grand_total = request.session.get('grand_total', 0)
         print("Original grand total:", grand_total)  # Debug
 
-        if grand_total <= 0:
-            messages.error(request, "No outstanding amount to apply loyalty points to.")
-            print("Grand total is already zero or negative.")  # Debug
-            return redirect('shopping_bag:view_shopping_bag')
+        if grand_total <= 1:
+            points_needed = 0
+        else:
 
-        # Calculate points needed to bring grand total to zero
-        points_needed = min(points_to_apply, grand_total)
+            # Calculate points needed to bring grand total to zero
+            points_needed = min(points_to_apply, grand_total - 1)
+            
         print("Points needed:", points_needed)  # Debug
 
         if points_needed > loyalty_points.points:
