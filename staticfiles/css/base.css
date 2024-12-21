@@ -609,3 +609,54 @@ footer.custom-white .footer-link:hover {
         height: calc(100vh - 210px);
     }
 }
+
+/* Newsletter styling */
+.newsletter-signup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.newsletter-signup label {
+    font-size: 14px;
+}
+
+.newsletter-signup input[type="email"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.newsletter-signup button {
+    background-color: white;
+    color: #445261;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.newsletter-signup button:hover {
+    background-color: #445261;
+    color: white;
+}
+
+.messages {
+    margin-top: 10px;
+    list-style-type: none;
+    padding: 0;
+    font-size: 12px;
+}
+
+.messages li {
+    padding: 5px;
+}
+
+.suscribe-text-white {
+    color: #ffffff; 
+    font-weight: bold; 
+}
+
+
+
