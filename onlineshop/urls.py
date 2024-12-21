@@ -16,6 +16,7 @@ urlpatterns = [
     path('reviews/', include('reviews.urls')),
     path('loyalty/', include('loyalty.urls')),
     path('contact/', include('contact.urls')),
+    path('newsletter/', include('newsletter.urls')),
 ] 
 # serving media files
 if settings.DEBUG:
