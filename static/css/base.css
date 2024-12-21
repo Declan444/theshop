@@ -1,11 +1,13 @@
-html {
+html, body {
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     background: url('../media/horseandfoal.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    /*height: calc(100vh - 164px);*/
     color: #555;
     font-family: 'Bodoni';
     
@@ -88,49 +90,96 @@ body {
     left: 0;
 }
 
+/* Ensure the header doesn't overlap the content */
+.header-container {
+    position: relative;
+    z-index: 10;
+}
+
+/* Add padding to push content down from the top */
+.content-container {
+    padding-top: 50px; 
+    padding-bottom: 50px; 
+}
+
+/* Adjust the column layout and initial positioning */
+.col-12.col-lg-6.my-auto {
+    margin: 0 auto !important; 
+    transform: translateY(-100px); 
+}
+
+
+
+
+.h-100 {
+    height: auto !important; 
+    max-height: 100vh; 
+}
 
 .weekly-bargain-wrapper {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8); 
     border-radius: 10px;
-    padding: 30px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 10px;
-    margin-bottom: 200px;
-    max-width: 300px; 
-    margin-left: auto;
+    padding: 20px 25px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); 
+    margin-top: 30px; 
+    margin-bottom: 50px;
+    max-width: 350px; 
     margin-right: auto;
 }
 
+/* Weekly Bargain Content */
 .weekly-bargain-content h2 {
     color: #445261;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 1.5rem; 
-    margin-bottom: 15px;
+    font-size: 1.8rem; 
+    text-align: center;
 }
-
 .weekly-bargain-content h3 {
     color: #445261;
-    margin-top: 10px;
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
+    margin-top: 15px;
+    text-align: center; 
 }
 
 .weekly-bargain-content p {
-    color: #445261;  
-    margin-bottom: 10px;
+    color: #445261;
+    margin-bottom: 15px;
+    text-align: center; /* Centered for consistency */
 }
 
+/* Primary Button Styling */
 .weekly-bargain-content .btn-primary {
     background-color: #445261;
     border-color: #445261;
-    transition: background-color 0.3s ease;
-    padding: 8px 16px; 
-    font-size: 0.9rem;
+    color: #fff; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    padding: 10px 20px; 
+    font-size: 1rem; 
+    border-radius: 5px; 
 }
 
 .weekly-bargain-content .btn-primary:hover {
-        
-    color: #26bb48;        
+    background-color: white; 
+    border-color: #445261; 
+    color: #445261; 
+}
+
+/* Shop Now Button */
+.shop-now-button {
+    margin-top: 30px; 
+    font-size: 1rem;
+    padding: 12px 20px; 
+    border-radius: 20px;
+    background-color: #445261;
+    color: #fff;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.shop-now-button:hover {
+    background-color: white;
+    color: #445261;
 }
 
 .overlay {
@@ -293,7 +342,7 @@ input[name='q']::placeholder  {
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: #17a2b8; 
 }
 
 /* Product Form */
@@ -340,7 +389,7 @@ input[name='q']::placeholder  {
    
 }
 
-/* -------------------------------- Media Queries */
+/*  Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -420,7 +469,7 @@ input[name='q']::placeholder  {
         padding: .25rem .5rem !important;
     }
 }
-/* review card body */
+
 /* Push the content down from the header */
 .review-comment-container {
     margin-top: 100px; 
@@ -484,14 +533,22 @@ input[name='q']::placeholder  {
 }
 
 /* Footer styling */
+
+.container {
+    min-height: 20vh; 
+    display: flex;
+    flex-direction: column; 
+}
+
 footer.custom-white {
-    background-color: #445261 !important; 
-    
-    width: 100%; 
-    z-index: 1000;
-    color: white !important; 
+    background-color: #445261 !important;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    color: white !important;
     border-top: 1px solid #ccc !important;
     margin-top: auto; 
+    padding: 10px; 
 }
 
 /* Ensure footer is pushed down with flexbox layout */
@@ -504,7 +561,7 @@ body {
 
 /* Main content area */
 main {
-    flex: 1; /* Makes the main content area grow to fill available space */
+    flex: 1; 
 }
 
 .custom-edit-btn {
@@ -534,32 +591,32 @@ main {
 
 /* Form wrapper styling */
 .contact-form-wrapper {
-    background-color: #f8f9fa; /* Light grey background */
+    background-color: #f8f9fa; 
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px; /* Added spacing to move form further down */
+    margin-top: 20px; 
 }
 
 /* Message field styling */
 textarea {
-    height: 100px !important; /* Smaller height for the message area */
-    resize: vertical;        /* Allow resizing only vertically */
+    height: 100px !important; 
+    resize: vertical;       
 }
 
 /* Adjust form margins to fit nicely inside the wrapper */
 .contact-form {
-    margin: 0; /* Remove default margins inside the wrapper */
+    margin: 0; 
 }
 
 /* Ensure the form is positioned properly under the header */
 .contact-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align content from the top */
+    justify-content: flex-start; 
     align-items: center;
     min-height: 100vh;
-    padding-top: 20px; /* Adjust to give space between the header and form */
+    padding-top: 20px; 
 }
 
 /* Optional: To add some spacing between the form and other elements */
@@ -569,13 +626,13 @@ textarea {
 
 /* Optional: Header title spacing adjustments */
 .page-title {
-    margin-bottom: 20px; /* Adds spacing below the title */
+    margin-bottom: 20px; 
 }
 
 /* Add space for larger screens (above 995px) */
 @media (min-width: 996px) {
     .container {
-        margin-top: 100px; /* Adjust this value to create enough space below the navbar */
+        margin-top: 100px; 
     }
 }
 
@@ -656,6 +713,39 @@ footer.custom-white .footer-link:hover {
 .suscribe-text-white {
     color: #ffffff; 
     font-weight: bold; 
+}
+
+.newsletter-signup .form-group {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.newsletter-signup .form-control {
+    flex: 1; 
+    margin-right: 10px; 
+    margin-bottom: 0; 
+}
+
+.newsletter-signup .custom-primary-btn {
+    flex-shrink: 0; 
+    margin-top: 0; 
+}
+
+@media (max-width: 576px) {
+    .newsletter-signup .form-group {
+        flex-direction: column; 
+    }
+
+    .newsletter-signup .form-control {
+        margin-right: 0; 
+        margin-bottom: 10px; 
+    }
+
+    .newsletter-signup .custom-primary-btn {
+        margin-top: 0;
+    }
 }
 
 
