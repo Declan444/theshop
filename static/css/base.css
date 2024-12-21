@@ -697,6 +697,8 @@ footer.custom-white .footer-link:hover {
 .newsletter-signup button:hover {
     background-color: #445261;
     color: white;
+    border: 2px solid white;
+    border-radius: 20px;
 }
 
 .messages {
