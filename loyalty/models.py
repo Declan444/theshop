@@ -19,8 +19,8 @@ class LoyaltyPoints(models.Model):
         except (ValueError, TypeError):
             raise ValueError("Invalid amount spent value")
 
-        # Calculate points earned: 1 euro = 0.1 points
-        points_earned = amount_spent * 0.1
+        # Calculate points earned: 1 euro = 1 points
+        points_earned = amount_spent * .1
 
         # Add the earned points to the user's balance
         self.points += points_earned
