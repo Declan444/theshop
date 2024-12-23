@@ -39,6 +39,7 @@ body {
 .btn-black {
     background: #445261;
     color: white;
+    border-radius: 5px !important;
 }
 
 .shop-now-button:hover,
@@ -47,8 +48,9 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #dcdee0;
+    background: white;
     color: #445261;
+    border: 1px solid #445261
     
 }
 
@@ -170,7 +172,7 @@ body {
     margin-top: 30px; 
     font-size: 1rem;
     padding: 12px 20px; 
-    border-radius: 20px;
+    border-radius: 5px !important;
     background-color: #445261;
     color: #fff;
     text-transform: uppercase;
@@ -376,8 +378,10 @@ input[name='q']::placeholder  {
 
 /* Responsive adjustments */
 @media (max-width: 991px) {
+    
     .navbar-nav .nav-item::after {
         display: none;
+
     }
     
     .dropdown-menu {
@@ -472,10 +476,9 @@ input[name='q']::placeholder  {
 }
 
 /* Push the content down from the header */
-.review-comment-container {
-    background: rgba(255, 255, 255, 0.8);
-    margin-top: 100px; 
-    padding-top: 20px;
+.review-comment-container {   
+    
+    padding-top: 10px;
 }
 
 /* Align the outline with the background */
@@ -493,11 +496,20 @@ input[name='q']::placeholder  {
     border-radius: 5px; 
     padding: 20px; 
 }
+.text-white {
+    color: white;
+}
 
 /* Adjust spacing for mobile and large screens */
 @media (min-width: 992px) {
     .review-comment-container {
         margin-top: 120px; 
+    }
+}
+
+@media (min-width: 426px) {
+    .review-comment-container {
+        margin-top: 200px; 
     }
 }
 
@@ -518,6 +530,14 @@ input[name='q']::placeholder  {
 /* delete confirmation message */
 .delete-container {
     margin-top: 300px !important; 
+}
+
+@media (min-width: 996px) {
+    .h1, h1 {
+        
+        margin-top: 120px;
+        color: white;
+    }
 }
 
 /* Loyalty style */
@@ -569,13 +589,14 @@ main {
 .custom-edit-btn {
     background-color: #445261 !important; 
     border-color: #445261 !important;    
-    color: white !important;            
+    color: white !important; 
+    border-radius: 5px !important;           
 }
 
 .custom-edit-btn:hover {
     background-color: white !important; 
     border-color: #445261 !important;
-    color: black !important;
+    color: #445261 !important;
 }
 
 /* Contact Form styling */
@@ -583,7 +604,8 @@ main {
 .custom-contact-btn {
     background-color: #445261 !important; 
     border-color: #445261 !important;    
-    color: white !important;            
+    color: white !important;
+    border-radius: 5px !important;            
 }
 
 .custom-contact-btn:hover {
@@ -593,7 +615,7 @@ main {
 
 /* Form wrapper styling */
 .contact-form-wrapper {
-    background-color: #f8f9fa; 
+    background-color: rgba(250, 250, 250, 0.8); 
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -634,7 +656,7 @@ textarea {
 /* Add space for larger screens (above 995px) */
 @media (min-width: 996px) {
     .container {
-        margin-top: 100px; 
+        margin-top: 50px; 
     }
 }
 
@@ -692,7 +714,7 @@ footer.custom-white .footer-link:hover {
     color: #445261;
     padding: 5px 10px;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px !important;
     cursor: pointer;
 }
 
@@ -700,7 +722,7 @@ footer.custom-white .footer-link:hover {
     background-color: #445261;
     color: white;
     border: 2px solid white;
-    border-radius: 20px;
+    
 }
 
 .messages {
@@ -752,5 +774,44 @@ footer.custom-white .footer-link:hover {
     }
 }
 
+.heading-container {
+    margin-top: -20px;
+}
 
+.col-md-6 {
+    
+    margin-bottom: 10px !important;
+    
+}
 
+.custom-select {
+    border-radius: 20px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8) !important;
+    background-color: rgba(250, 250, 250, 0.6) !important;
+   
+}
+
+.card {
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8) !important;
+    background-color: rgba(250, 250, 250, 0.6) !important;
+}
+
+.image-container {
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8) !important;
+    
+}
+
+.shopping-bag-img {
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8) !important;
+    border: none !important;
+}
+
+.rounded-0 {
+    border-radius: 10px !important;
+}
