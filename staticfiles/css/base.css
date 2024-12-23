@@ -815,3 +815,24 @@ footer.custom-white .footer-link:hover {
 .rounded-0 {
     border-radius: 10px !important;
 }
+
+.card {
+    height: 100%; /* Ensures all cards take full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Makes the footer align properly */
+}
+
+.card-img-top {
+    height: 280px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensures images scale properly without distortion */
+}
+
+.card-body {
+    flex-grow: 1; /* Ensures content grows evenly without affecting card size */
+    text-align: center; /* Centers the text if needed */
+}
+
+.card-footer {
+    background-color: white; /* Ensures consistent footer style */
+}
