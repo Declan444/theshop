@@ -194,7 +194,7 @@ As a logged in user I want to be able to see my profile, loyalty points and be a
 ### Design Choices
 #### Colour Scheme
 The colour scheme is 
-![Shades of #445261](castleloststud/readme_assets/images/colour_scheme.png)
+![Shades of #445261](onelineshop/readme_assets/images/colour_scheme.png)
 
 #### Typography
 For this project I choose Roboto as is modern and suited my concept.
@@ -329,14 +329,19 @@ This is an example of the views.py result. All other python code pages were chec
 
 ### Manual Testing User Stories
 
+Manual Testing file for user stories can be found in the [Manual Testing UserStory File](onlineshop/readme_assets/testing/userstory_manual_testing.md)
 
 ### Manual Testing Features
+
+Manual Testing file can be found in the [Manual Testing File](onlineshop/readme_assets/testing/manual_testing.md)
 
 
 
 ### Automated Testing
 
 Automated Testing was carried out using the local sqlite3 database. This was configured in the settings.py file for test. This allowed me to carry out the tests on this db only.
+
+Automated Testing file can be found in the [Automated Testing File](onlineshop/readme_assets/testing/automated_testing.md)
 
 
 

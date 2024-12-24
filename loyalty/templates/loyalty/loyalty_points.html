@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="loyalty-points-container body">
-    <h1>Welcome, {{ request.user.username }}</h1>
+    <h1>Welcome  {{ request.user.username|capfirst }}</h1>
     <p>You currently have <strong>{{ loyalty_points.points }}</strong> loyalty points available.</p>
     {% if loyalty_points.points == 0 %}
         <p>You don't have any points yet. Start shopping to earn points!</p>
