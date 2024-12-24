@@ -817,22 +817,47 @@ footer.custom-white .footer-link:hover {
 }
 
 .card {
-    height: 100%; /* Ensures all cards take full height */
+    height: 100%; 
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Makes the footer align properly */
+    justify-content: space-between; 
 }
 
 .card-img-top {
-    height: 280px; /* Set a fixed height for the images */
-    object-fit: cover; /* Ensures images scale properly without distortion */
+    height: 280px; 
+    object-fit: cover; 
 }
 
 .card-body {
-    flex-grow: 1; /* Ensures content grows evenly without affecting card size */
-    text-align: center; /* Centers the text if needed */
+    flex-grow: 1; 
+    text-align: center; 
 }
 
 .card-footer {
-    background-color: white; /* Ensures consistent footer style */
+    background-color: white; 
+}
+
+/* Make images larger */
+/* When hovering over the card, scale the container and the image */
+.product-container .card:hover {
+    transform: scale(1.6); 
+    transition: transform 0.3s ease-in-out;
+    z-index: 10; 
+    position: relative; 
+}
+
+.product-container .card:hover .card-img-top {
+    transform: scale(1.5); 
+    transition: transform 0.3s ease-in-out; 
+}
+
+/* Default styles for the card and image */
+.card {
+    transition: transform 0.3s ease-in-out; 
+}
+
+.card-img-top {
+    display: block;
+    margin: auto;
+    transition: transform 0.3s ease-in-out; 
 }
