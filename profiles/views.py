@@ -13,6 +13,8 @@ def profile(request):
     """" Display the users profile."""
     profile = get_object_or_404(UserProfile, user=request.user)
 
+    orders = profile.orders.all()
+
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
