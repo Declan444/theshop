@@ -88,6 +88,8 @@ Shop Site Test
 | My Profile Link | Directed to my profile page | Clicked on the my profile link | Directed to the my profile page | &check; | Declan |
 | Order Number Link | Directed to order page | Clicked on the order number link | Directed to the order page | &check; | Declan |
 | Check out Deals Link | Directed to Deals page | Clicked on the Check out Deals link | Directed to Deals page | &check; | Declan |
+| **Loyalty Points Page** |
+| Loyalty Points Link | Directed to loyalty points page | Clicked on the loyalty points link | Directed to the loyalty points page | &check; | Declan |
 
 
 
