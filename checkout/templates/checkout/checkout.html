@@ -94,13 +94,13 @@
                     {{ order_form.country | as_crispy_field }}                  
                     <div class="form-check form-check-inline float-right mr-0">
                         {% if user.is_authenticated %}
-                            <label class="form-check-label" for="id-dave-info">Save this delivery informayion to my profile</label>
+                            <label class="form-check-label" for="id-save-info">Save this delivery informayion to my profile</label>
                             <input class="form-check-input ml-2 mr-0" type="checkbox"  name="save-info" id="id_save_info" checked>
                         {% else %}
-                            <label class="form-check-label" for="id_save_info">
+                            <div class="form-check-label">
                                 <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
                                 <a class="text-info" href="{% url 'account_login' %}">Login</a> or save  this information
-                            </label>
+                            </div>
                         {% endif %}
                     </div>                  
                 </fieldset>
@@ -139,11 +139,11 @@
     </div>          
 </div>
 <div id="loading-overlay">
-    <h1 class="text-light logo-font loading-spinner">
+    <div class="text-light logo-font loading-spinner">
         <span class="icon">
             <i class="fas fa-3x fa-sync-alt fa-spin"></i>
         </span>
-    </h1>
+    </div>
 </div>
 {% endblock %}
 

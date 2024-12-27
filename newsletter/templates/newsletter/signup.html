@@ -1,9 +1,9 @@
 <div class="newsletter-signup">
     <form method="post" action="{% url 'subscribe' %}">
         {% csrf_token %}
-        <label class="subscribe-text-white" for="id_email">Subscribe to our Newsletter</label>
+        <label class="subscribe-text-white" for="id_subscribe_email">Subscribe to our Newsletter</label>
         <div class="form-group d-flex align-items-center">
-            <input type="email" class="form-control mx-auto" id="id_email" name="email"
+            <input type="email" class="form-control mx-auto" id="id_subscribe_email" name="email"
                 aria-describedby="emailHelp" placeholder="Enter your email address"
                 autocomplete="email">
             <button type="submit"

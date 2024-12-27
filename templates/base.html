@@ -7,7 +7,7 @@
   {% block meta %}
   <!-- Required meta tags -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="csrf-token" content="{{ csrf_token }}">
   {% endblock %} {% block extra_meta %} {% endblock %}
@@ -17,7 +17,7 @@
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap">
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
   {% endblock %} {% block extra_css %} {% endblock %}
   {% block corejs %}
@@ -48,7 +48,7 @@
         <form method="GET" action="{% url 'products' %}">
           <div class="input-group w-100">
             <input class="form-control border border-black rounded-0" type="text" name="q"
-              placeholder="Search our Site" />
+              placeholder="Search our Site">
             <div class="input-group-append">
               <button class="form-control btn btn-black border border-black rounded-0" type="submit">
                 <span class="icon">
@@ -149,11 +149,11 @@
     <div class="container-lg">
       <div class="row mx-auto">
         <div class="col-md-4 mt-md-0 pb-2">
-          <p class="text-center mb-0">
-          <div class="footer-content">
-            {% include 'newsletter/signup.html' %}
-          </div>
-          </p>
+          <p class="text-center mb-0"></p>
+            <div class="footer-content">
+              {% include 'newsletter/signup.html' %}
+            </div>
+          
         </div>
         <div class="col text-center">
           <p class="mb-0"><i class="custom-white fa-solid fa-phone"></i> +353 111111111</p>
@@ -169,8 +169,8 @@
               </a>
             </p>
             <div class="opening-hours font-montserrat custom-white mb-0">
-              <p class="custom-blue mb-0 pt-2">Created by <span
-                  class="custom-font custom-red font-weight-normal pr-2">Declan Lenahan</span>
+              <p class="custom-blue mb-0 pt-2">Created by 
+                <span class="custom-font custom-red font-weight-normal pr-2">Declan Lenahan</span>
                 <a href="https://github.com/declan444" target="_blank" class="ms-2 text-decoration-none"
                   aria-label="Link to Github, opens in a new tab"><i
                     class="footer-link custom-blue fa-brands fa-github"></i>
@@ -187,7 +187,7 @@
     </div>
   </footer>
   {% block postloadjs %}
-  <script type="text/javascript">
+  <script>
     $('.toast').toast('show')
   </script>
   {% endblock %}

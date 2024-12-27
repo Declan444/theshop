@@ -303,6 +303,13 @@ This website is deployed to Heroku from a GitHub repository, the following steps
 ### HTML Validation
 
 HTML was validated using the [W3C Markup Validation Service](https://validator.w3.org/) for all pages. As the project uses Django templates, the HTML was validated by copying the rendered HTML from the browser into the validator.
+![landing page](image.png)
+
+![products page](image-1.png)
+
+![Checkout Success Page](image-2.png)
+
+![contact Us Page](<FireShot Capture 104 - Showing results for contents of text-input area - Nu Html Checker_ - validator.w3.org contact us page.png>)
 
 No errors and no warnings were found
 
