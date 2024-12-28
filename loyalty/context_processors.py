@@ -8,7 +8,7 @@ def loyalty_points_processor(request):
     if request.user.is_authenticated:
         try:
             loyalty_points = LoyaltyPoints.objects.get(user=request.user)
-            return {'loyalty_points': loyalty_points.points}
+            return {"loyalty_points": loyalty_points.points}
         except LoyaltyPoints.DoesNotExist:
-            return {'loyalty_points': 0}
-    return {'loyalty_points': None}
+            return {"loyalty_points": 0}
+    return {"loyalty_points": None}

@@ -3,12 +3,13 @@ from django.dispatch import receiver
 
 from .models import OrderLineItem
 
+
 @receiver(post_save, sender=OrderLineItem)
 def update_on_save(sender, instance, created, **kwargs):
     """
     Update the order total when a line item is created or updated.
     """
-    print('signal triggered: post_save')
+    print("signal triggered: post_save")
     instance.order.update_total()
 
 
@@ -17,7 +18,7 @@ def update_on_delete(sender, instance, **kwargs):
     """
     Update the order total when a line item is deleted.
     """
-    
-    print('signal triggered: post_delete')
+
+    print("signal triggered: post_delete")
 
     instance.order.update_total()

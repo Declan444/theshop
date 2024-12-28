@@ -332,6 +332,22 @@ No errors and no warnings were found
 
 This is an example of the views.py result. All other python code pages were checked in CI Phython linter.
 
+![checkout App ](image-3.png)
+
+![contact app](image-4.png)
+
+![loyalty app](image-5.png)
+
+![newsletter app](image-6.png)
+
+![products app](image-7.png)
+
+![profiles app](image-8.png)
+
+![reviews app](image-9.png)
+
+![shopping_bag app](image-10.png)
+
 
 
 ### Manual Testing User Stories

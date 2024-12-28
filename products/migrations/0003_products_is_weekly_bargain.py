@@ -14,7 +14,8 @@ class Migration(migrations.Migration):
             model_name="products",
             name="is_weekly_bargain",
             field=models.BooleanField(
-                default=False, help_text="Mark this product as a weekly bargain"
+                default=False,
+                help_text="Mark this product as a weekly bargain",
             ),
         ),
     ]

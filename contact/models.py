@@ -7,6 +7,7 @@ class Contact(models.Model):
     """
     Contact form submission.
     """
+
     name = models.CharField(max_length=100)
     email = models.EmailField()
     subject = models.CharField(max_length=255)

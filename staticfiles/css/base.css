@@ -229,10 +229,10 @@ input[name='q']::placeholder  {
 }
 /* Toast CSS */
 .message-container {
-    background-color: #445261;
-    color: white;
+    background-color:white;
+    color: black;
     position: fixed;
-    top: 729x;
+    top: 10px;
     right: 15px;
     z-index: 9999999;
 }
@@ -244,6 +244,7 @@ input[name='q']::placeholder  {
 .toast_capper {
     height: 2px;
 }
+
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
@@ -465,12 +466,14 @@ input[name='q']::placeholder  {
     .btn.btn-outline-black.rounded-0,
     .btn.btn-black.rounded-0 {
         padding: .375rem .375rem;
+        
     }
 
     .btn.btn-outline-black.rounded-0.btn-lg,
     .btn.btn-black.rounded-0.btn-lg {
         padding: .375rem .375rem;
         font-size: .75rem;
+        
     }
 
     .increment-qty, .decrement-qty {
@@ -634,7 +637,7 @@ main {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px; 
+    margin-top: 80px; 
 }
 
 /* Message field styling */
