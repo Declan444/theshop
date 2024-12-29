@@ -18,7 +18,7 @@
                         
                         {% if review.user == request.user %}
                         <!-- Edit Button -->
-                        <a href="{% url 'edit_review' review.id %}" class="btn btn-primary btn-sm mt-2 custom-edit-btn">Edit</a>
+                        <a href="{% url 'edit_review' review.id %}" class="btn custom-edit-btn rounded-0 btn-sm mt-2 custom-edit-btn">Edit</a>
                         
                         <!-- Delete Button -->
                         <a href="{% url 'delete_review' review.id %}" class="btn btn-danger btn-sm mt-2">Delete</a>
