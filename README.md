@@ -1,6 +1,6 @@
 # The Equestrian Shop
 
- 
+ ![site mockup](image-11.png)
 
 ## The equestrian shop to purchase all things equestrian
 
@@ -316,15 +316,23 @@ No errors and no warnings were found
 
 ### CSS Validation
 
-No errors and no warnings were found
+No errors or warnings were found.
+
+![css file](image-13.png)
 
 
 
 ### Lighthouse Test
 
+![landing page](image-12.png)
+
 
 
 ### JSHint Validator
+
+![quantity_input](image-14.png)
+
+![sort.js](image-15.png)
 
 
 
@@ -473,3 +481,8 @@ if request.user.is_authenticated:
     print(f"Points Requested to Apply: {points_applied}")
     print(f"Grand Total after Applying Points: {grand_total}")
     print(f"User Loyalty Points (Remaining): {loyalty_points}")
+
+
+
+    https://websitemockupgenerator.com/
+    django 5 By Example

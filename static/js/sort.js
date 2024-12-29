@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 // Code to sort from the sort box on the products.html page
 
 // Scroll to the top of the page when ".btt-link" is clicked
