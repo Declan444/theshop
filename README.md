@@ -4,11 +4,11 @@
 
 ## The equestrian shop to purchase all things equestrian
 
-Grange Equestrian was developed to allow beginners, intermediate and advanced riders to be able to book a riding lesson with an instructor of choice. The user can enter the site or app, read about the different types of lessons, read about the instructors and then book a lesson that is available. The site is intended to give the user all the information that they would need to enable them to make an informed choice of which lesson and which instructor they need to book. The booking process shows days available and timeslots within those days for the user to book. Once booked the user is shown exactly what they have booked which awaits approval by the instructor. 
-
-The site also allows the user to view all comments made by other users who have had a that specific lesson. If the user has had a lesson they can then leave a comment on that specific lesson. The users can also delete a comment or edit a comment that they have left on the lesson.
+The equestrian online shop was developed to allow users who are interested in purchasing equestrian products to find and purchase products from for this market. The user can enter the site by clicking shop now which will bring them to the products section. The user can easily see the products available and has the ability to sort the products using various methods or search the site for specific products e.g. saddle, bridle etc. The user can purchase products without registering to the site or they can register and then login which will allow them to gain loyalty points which convert to euro and these can be applied to future purchases. The shop also allows the user to view comments, leave comments and edit or delete their own comments. The aim of the site is to allow users to purchase products as easily as possible and to view all the products that are available for sale. 
 
 ### Project Overview
+
+The Equestrian Online shop site is intended to offer a user-friendly interface to allow the user to browse products and also to purchase any desired products. The site is aimed to be simple to navigate, clean and simple design which highlights the products, follows a logical flow which is intuitive for the user. The site follows the core structore of the Code Institute Boutique Ado walkthrough with the user of django and deploying to heroku. The project uses AWS for image storage, allows the user to subscribe to a newsletter and the site implements a loyalty program for registered users purchases.
 
 
 
@@ -23,6 +23,8 @@ The site also allows the user to view all comments made by other users who have 
 - CRUD capability for Admin
 - Ability for admin to add images, weekly bargains etc. Access to edit all aspects of the site.
 - User authentication and profile management
+- Loyalty points for all purchases
+- Ease to understand and find products in the site
 
 ### Target Audience
 
@@ -66,16 +68,20 @@ The site is designed for anybody interested in purchasing horse riding products.
 ### Key Features Summary
 
     - Home page where you can go directly to the shop or browse the site
+    - View and sort products
+    - Purchase products and increase and decrease quantities of products
+    - Search products by category, rating, price
+    - Search the site by product name or word
     - User registration and login with form validation and error handling
-    - Django admin panel for superuser to manage, users, bookings, instructors and lessons
+    - Django admin panel for superuser to manage, products, users, email addresses, orders, loyalty points, newsletter subscriptions, categories, products, user profiles and reviews
     - Customised 404 error pages
-    - Ability to comment on your experience
-    - Full front and back end CRUD capability
+    - Ability to leave a comment and have CRUD capability on your comments
+    - Loyalty points gained for purchases
     - Ability to view site comments
-    - 
-    - 
-    - Contact us capability for the user
-    - 
+    - Contact us form
+    - Newsletter subscription
+    - View your profile
+    - View your shopping basket
 
 ## User Experience (UX)
 
@@ -195,12 +201,13 @@ As a logged in user I want to be able to see my profile, loyalty points and be a
 #### Colour Scheme
 The colour scheme is 
 ![Shades of #445261](onelineshop/readme_assets/images/colour_scheme.png)
+![Shades of #445261 ](image-16.png)
 
 #### Typography
 For this project I choose Roboto as is modern and suited my concept.
 
 #### Imagery
-All background imagery is the property of Grange Equestrian. The images for the shop were taken from Mackey Equestrian Ireland and Tri Equestrian for demonstration purposes.
+All background imagery is the property of Equestrian Online. The images for the shop were taken from Mackey Equestrian Ireland and Tri Equestrian for demonstration purposes.
 
 
 ### Wireframes
@@ -211,6 +218,8 @@ All background imagery is the property of Grange Equestrian. The images for the 
 ### Sitemap
 
 The following sitemap gives a visual flow of the Grange Equestrian Site.
+
+![Sitemap](image-17.png)
 
 
 
