@@ -1,6 +1,6 @@
 # The Equestrian Shop
 
- ![site mockup](image-11.png)
+ ![site mockup](onlineshop/readme_assets/images/site-mockup.png)
 
 ## The equestrian shop to purchase all things equestrian
 
@@ -51,17 +51,22 @@ The site is designed for anybody interested in purchasing horse riding products.
 
 5. [Agile Methodology](#agile-methodology)
 
-6. [Deployment](#deployment)
+6. [Business Model, SEO & Marketing](#business-model-seo--marketing)
+    - [Business Model](#business-model)
+    - [SEO](#seo)
+    - [Marketing](#marketing)
 
-7. [Testing](#testing)
+7. [Deployment](#deployment)
 
-8. [Bugs and Fixes](#bugs-and-fixes)
+8. [Testing](#testing)
 
-9. [Unsolved Issues and Bugs](#unsolved-issues-and-bugs)
+9. [Bugs and Fixes](#bugs-and-fixes)
 
-10. [Future Developments](#future-developments)
+10. [Unsolved Issues and Bugs](#unsolved-issues-and-bugs)
 
-11. [Credits](#credits)
+11. [Future Developments](#future-developments)
+
+12. [Credits](#credits)
 
 ## Features
 
@@ -89,18 +94,15 @@ The site is designed for anybody interested in purchasing horse riding products.
 
 #### Site Owner Goals
 
-The site owner goals was to allow a user to visit the site, easily be able to navigate around the site,
+The site owner goals was to be able to update the products either through the frontend or the backend. Completely update all the information about the products, view orders and all email addresses. The site owner should have full control over the site i.e. uploading products, images, setting prices, etc.
 
 #### User Goals
 
-The user goals were to be able to easily purchase a product. 
+The site user goals was to visit the site, easily be able to navigate around the site to find equestrian products. The user can login to the site, register, view products and purchase products. The user can sort through the products for ease of finding the correct product. The user will gain loyalty points for all purchases. The user can leave comments and subscribe to the site newsletter. 
 
 ### User Stories
 User stories were used to drive this project. 
-[User Stories (github issues)](https://github.com/Declan444/theshop/issues)
-<br>
-Kanban Board was used to control the project flow.
-[Kanban Board (github project)](https://github.com/users/Declan444/projects/12)
+![User Stories Github Issues](onlineshop/readme_assets/images/userstories-issues.png)
 
 ### Landing Page
 As a user I want to be able to visit the home page so that I can see a nav bar, header, main area and footer
@@ -200,8 +202,8 @@ As a logged in user I want to be able to see my profile, loyalty points and be a
 ### Design Choices
 #### Colour Scheme
 The colour scheme is 
-![Shades of #445261](onelineshop/readme_assets/images/colour_scheme.png)
-![Shades of #445261 ](image-16.png)
+![Shades of #445261](onlineshop/readme_assets/images/color-chart.png)
+
 
 #### Typography
 For this project I choose Roboto as is modern and suited my concept.
@@ -212,24 +214,24 @@ All background imagery is the property of Equestrian Online. The images for the 
 
 ### Wireframes
 
-
+![wireframes](onlineshop/readme_assets/images/wireframes/wireframes.png)
 
 ## Information Architecture
 ### Sitemap
 
 The following sitemap gives a visual flow of the Grange Equestrian Site.
 
-![Sitemap](image-17.png)
+![Sitemap](onlineshop/readme_assets/images/sitemap.png)
 
 
 
 ### ERD Diagram
 
+![ERD Diagram](onlineshop/readme_assets/images/erd_diagram.png)
+
 
 
 ### Database Relationships
-
-
 
 
 [Go to Table of Contents](#table-of-contents)
@@ -249,11 +251,11 @@ The following resources were used to help implement the website:
 - [Heroku](https://www.heroku.com) for accessing and storing my project.
 - [Django](https://www.djangoproject.com/) Python framework for the overall project implementation.
 - [Bootstrap](https://getbootstrap.com/) CSS framework that allowed to implement various styled elements, including modals. It was also used for quick and easy styling of the overall website.
-- [Lucidchart](https://lucid.app/) for creating flowchart of the game.
+- [Lucidchart](https://lucid.app/) for creating flowcharts.
 - [CI Python Linter](https://pep8ci.herokuapp.com/#) for validating and checking my code for best code practices.
 - [Whitenoise](https://whitenoise.readthedocs.io/en/stable/index.html) Python library used for handling static files.
 - [Django allauth](https://allauth.org/) authentication solution for Django framework used for allowing users to register and login.
-- [Django summernote](https://summernote.org/) Javascript library used for providing useful editing tools for Django admin site. 
+
 
 Other libraries and dependencies can be seen in the requirements.txt file. 
 
@@ -272,7 +274,25 @@ It allowed me to be able to:
     - Maintain a clear overview of project progress for review when I returned to the project
     
 
-![Kanban Board](castleloststud/readme_assets/images/kanban_board.png)
+![Kanban Board](onlineshop/readme_assets/images/kanban_board.png)
+
+
+### Business Model, SEO & Marketing
+
+## Business Model
+
+Equestrian Online is an online shop to supply equestrian goods to the equestrian market. The demographic of this market ranges across all ages and across all types. Anyone that has a horse will be in the market for equestrian products. The site is designed to be simple to use for all users and highlights the key products that equestrian users need.
+
+## SEO
+
+I followed along with the CI videos and the SEO words are included in the site. The sites uses discriptions as follows -Shop high-quality equestrian supplies, including saddles, horse riding boots, tack, grooming kits, and more. Affordable prices and fast shipping and keywords as follows - equestrian supplies, horse riding gear, saddles, equestrian clothing, horse blankets, tack and saddlery, horse grooming supplies
+
+
+## Marketing
+
+I followed the same idea for marketing as with SEO and used questions from CI learning platform to help:
+A facebook page was created and can be viewed at: [Equestrian Online Facebook Page](https://www.facebook.com/profile.php?id=61569843507861)
+
 
 ## Deployment 
 
@@ -311,14 +331,19 @@ This website is deployed to Heroku from a GitHub repository, the following steps
 ## Code Validation
 ### HTML Validation
 
-HTML was validated using the [W3C Markup Validation Service](https://validator.w3.org/) for all pages. As the project uses Django templates, the HTML was validated by copying the rendered HTML from the browser into the validator.
-![landing page](image.png)
+HTML was validated using the [W3C Markup Validation Service](https://validator.w3.org/) for all pages. As the project uses Django templates, the HTML was validated by copying the rendered HTML from the browser into the validator. All pages were tested and examples are below.
 
-![products page](image-1.png)
+Landing Page
+![landing page](onlineshop/readme_assets/images/landing-page.png)
 
-![Checkout Success Page](image-2.png)
+Products Page
+![products page](onlineshop/readme_assets/images/products-page.png)
 
-![contact Us Page](<FireShot Capture 104 - Showing results for contents of text-input area - Nu Html Checker_ - validator.w3.org contact us page.png>)
+Checkout Success Page
+![Checkout Success Page](onlineshop/readme_assets/images/checkout-success.png)
+
+Contact Us Page
+![contact Us Page](onlineshop/readme_assets/images/contact-us.png)
 
 No errors and no warnings were found
 
@@ -327,21 +352,22 @@ No errors and no warnings were found
 
 No errors or warnings were found.
 
-![css file](image-13.png)
+![css file](onlineshop/readme_assets/images/base-css.png)
 
 
 
 ### Lighthouse Test
 
-![landing page](image-12.png)
+![landing page](onlineshop/readme_assets/images/lighthouse-landing-page.png)
+![products page](onlineshop/readme_assets/images/lighthouse-products-page.png)
 
 
 
 ### JSHint Validator
 
-![quantity_input](image-14.png)
+![quantity-input](onlineshop/readme_assets/images/js-quality-input.png)
 
-![sort.js](image-15.png)
+![sort-js](onlineshop/readme_assets/images/sort-js.png)
 
 
 
@@ -349,21 +375,21 @@ No errors or warnings were found.
 
 This is an example of the views.py result. All other python code pages were checked in CI Phython linter.
 
-![checkout App ](image-3.png)
+![checkout App ](onlineshop/readme_assets/images/checkout-app.png)
 
-![contact app](image-4.png)
+![contact app](onlineshop/readme_assets/images/contact-app.png)
 
-![loyalty app](image-5.png)
+![loyalty app](onlineshop/readme_assets/images/loyalty-app.png)
 
-![newsletter app](image-6.png)
+![newsletter app](onlineshop/readme_assets/images/newsletter-app.png)
 
-![products app](image-7.png)
+![products app](onlineshop/readme_assets/images/products-app.png)
 
-![profiles app](image-8.png)
+![profiles app](onlineshop/readme_assets/images/profiles-app.png)
 
-![reviews app](image-9.png)
+![reviews app](onlineshop/readme_assets/images/reviews-app.png)
 
-![shopping_bag app](image-10.png)
+![shopping_bag app](onlineshop/readme_assets/images/shopping-bag-app.png)
 
 
 
@@ -387,51 +413,11 @@ Automated Testing file can be found in the [Automated Testing File](onlineshop/r
 
 ## Bugs and Fixes
 
-One challenging aspect of this build was ensuring that any date in the past would be non-active, preventing users from booking a date or lesson that had already passed. After many failed attempts, I implemented the following code in my `book_a_lesson` view. This code creates a dictionary that tracks whether each day of a given month is in the past. It loops through the month’s days, formats each day as a string, and checks if it is before today. The result is stored in `dates_status_dict`.
 
-
-dates_status_dict = {}
-for week in month_days:
-    for day in week:
-        if day:
-            day_formatted = f"{day:02d}"
-            month_formatted = f"{month:02d}"
-            year_formatted = f"{year:04d}"
-            day_date_str = (
-                f"{day_formatted}-{month_formatted}-{year_formatted}"
-            )
-            day_date = datetime.strptime(day_date_str, "%d-%m-%Y").date()
-            is_past = day_date < today
-            dates_status_dict[day_date_str] = is_past
-
-context = {
-    "year": year,
-    "month": month,
-    "prev_year": prev_year,
-    "prev_month": prev_month,
-    "next_year": next_year,
-    "next_month": next_month,
-    "month_days": month_days,
-    "today_date_str": today_date_str,
-    "dates_status": dates_status_dict,  # Pass as a dictionary
-}
- 
-I then created this code a custom template filter get_item which allows the template and retrieve booking status from the dates_status_dict by using the date string as a key.
- 
-@register.filter(name="get_item")
-def get_item(dictionary, key):
-    return dictionary.get(key, "Not Found")
-
-Then I use the get_item in the template
-{% if dates_status|get_item:day_date_str %}
-
-This solved my problem and all dates past are not active so the user cannot book a lesson that is in the past.
-
-Another problem I had was when a user clicked the edit button in the comments section on mobile device, the screen stayed on the button and did not jump to the edit comment text box. This was confusing for the user as it seemed that nothing happened. I solved this by adding  commentText.scrollIntoView({bahavior: 'smooth '}); line of code to the comments.js file. While seems easy, took a while to get to work. 
 
 ## Unsolved Issues and Bugs
 
-A bug I believe is that a user can book a lesson. They can then go and make a comment about the lesson even before they have had the lesson. Why a user would do this I am not sure but it can happen.
+
 
 ## Future Developments
 
@@ -449,10 +435,6 @@ A bug I believe is that a user can book a lesson. They can then go and make a co
 
 ## Content
 All of text and code in this project was generated by myself.
-
-
-
-
 
 
 Problems encountered
