@@ -201,6 +201,7 @@ As a logged in user I want to be able to see my profile, loyalty points and be a
 
 ### Design Choices
 #### Colour Scheme
+
 The colour scheme is 
 ![Shades of #445261](onlineshop/readme_assets/images/color-chart.png)
 
@@ -232,6 +233,61 @@ The following sitemap gives a visual flow of the Grange Equestrian Site.
 
 
 ### Database Relationships
+
+#### User to User Profile: One to One.
+
+The user can only have one profile that is associated with each specific user. 
+The userprofile model has a onetoonefield with user.
+
+#### User Profile to Order: One to Many.
+
+The userprofile can have many orders. 
+The order model has a foreign key to user profile.
+
+#### Loyalty Points to User: One to One.
+
+The loyalty points model has a one to one relationship with the user. The user can only contain 1 set of loyalty points.
+
+#### Review to User: Many to One.
+
+The user leave many reviews.
+
+#### Category to Products: One to Many.
+
+Each category can have many products.
+
+#### Order to OrderLineItem: One to Many.
+
+Each order can contain many lineItems. This acts as a bridge between the products and the orders.
+
+### Database Relationships
+
+#### User to User Profile: One to One.
+
+The user can only have one profile that is associated with each specific user. 
+The userprofile model has a onetoonefield with user.
+
+#### User Profile to Order: One to Many.
+
+The userprofile can have many orders. 
+The order model has a foreign key to user profile.
+
+#### Loyalty Points to User: One to One.
+
+The loyalty points model has a one to one relationship with the user. The user can only contain 1 set of loyalty points.
+
+#### Review to User: Many to One.
+
+The user leave many reviews.
+
+#### Category to Products: One to Many.
+
+Each category can have many products.
+
+#### OrderLineItem to Products: One to Many.
+
+Each order line item  can contain only one product but products can be associated with many line items.
+
 
 
 [Go to Table of Contents](#table-of-contents)
@@ -358,9 +414,13 @@ No errors or warnings were found.
 
 ### Lighthouse Test
 
-![landing page](onlineshop/readme_assets/images/lighthouse-landing-page.png)
-![products page](onlineshop/readme_assets/images/lighthouse-products-page.png)
+Landing Page
 
+![landing page](onlineshop/readme_assets/images/lighthouse-landing-page.png)
+
+Products Page
+
+![products page](onlineshop/readme_assets/images/lighthouse-products-page.png)
 
 
 ### JSHint Validator
@@ -375,19 +435,35 @@ No errors or warnings were found.
 
 This is an example of the views.py result. All other python code pages were checked in CI Phython linter.
 
+Checkout View Code
+
 ![checkout App ](onlineshop/readme_assets/images/checkout-app.png)
+
+Contact Us View Code
 
 ![contact app](onlineshop/readme_assets/images/contact-app.png)
 
+Loyalty App View Code
+
 ![loyalty app](onlineshop/readme_assets/images/loyalty-app.png)
+
+Newsletter App View Code
 
 ![newsletter app](onlineshop/readme_assets/images/newsletter-app.png)
 
+Products App View Code
+
 ![products app](onlineshop/readme_assets/images/products-app.png)
+
+Profiles App View Code
 
 ![profiles app](onlineshop/readme_assets/images/profiles-app.png)
 
+Reviews App View Code
+
 ![reviews app](onlineshop/readme_assets/images/reviews-app.png)
+
+Shopping Bag App View Code
 
 ![shopping_bag app](onlineshop/readme_assets/images/shopping-bag-app.png)
 
@@ -429,7 +505,7 @@ Automated Testing file can be found in the [Automated Testing File](onlineshop/r
 
 ## Credits
 
-## Credits
+
 
 
 
