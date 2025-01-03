@@ -376,7 +376,9 @@ This website is deployed to Heroku from a GitHub repository, the following steps
 ## Deploying to Heroku
 
 - Head back over to [Heroku](https://www.heroku.com) and click on your app and then go to the Settings tab
-- On the settings page scroll down to the config vars section and enter the DATABASE_URL which you will set equal to the elephantSQL URL, create Secret key this can be anything,  AWS URL this will be set to your AWS url and finally Port which will be set to 8000.
+- On the settings page scroll down to the config vars section and enter the DATABASE_URL which you will set equal to the postgress URL, create Secret key this can be anything,  input your AWS_ACCESS_KEY_ID and your  AWS_SECRET_ACCESS_KEY. Add in USE-AWS as True in the config vars. As in this project I used AWS, these were neccessary for storing media and static files.
+- As this site uses Stripe for payment, the stripe public, stripe secret and stripe WH Secret keys are stored in the config vars section of heroku.
+- This site also used email verification and email host pass and email host user were also added to the config vars section of heroku.
 - Then scroll to the top and go to the deploy tab and go down to the Deployment method section and select Github and then sign into your account.
 - Below that in the search for a repository to connect to search box enter the name of your repository that you created on GitHub and click connect
 - Once it has been connected scroll down to the Manual Deploy and click Deploy branch when it has deployed you will see a view app button below and this will bring you to your newly deployed app.
