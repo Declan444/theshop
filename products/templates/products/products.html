@@ -60,6 +60,7 @@
                         <a href="{% url 'product_detail' product.id %}"><img class="card-img-top img-fluid" src="{% get_media_prefix %}noimage.png" alt="{{ product.name }}">
                         </a>
                         {% endif %}
+                        
                         <div class="card-body pb-0">
                             <p class="mb-0">{{ product.name }}</p>
                         </div>
@@ -112,6 +113,9 @@
                     <hr>
                 </div>
                 {% endif %}
+                <p>{{ product.image.url }}</p>
+                <p>{{ STATIC_URL }}</p>
+                <p>{{ MEDIA_URL }}</p>
                 {% endfor %}
             </div>
         </div>
