@@ -597,6 +597,11 @@ footer.custom-white {
     padding: 10px;
 }
 
+a.footer.custom-white {
+    
+    color: white !important;
+    
+}
 /* Ensure footer is pushed down with flexbox layout */
 body {
     display: flex;

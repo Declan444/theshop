@@ -369,14 +369,14 @@ This website is deployed to Heroku from a GitHub repository, the following steps
 ## Create a database
 
 - Login to [Cldatabase maker](https://dbs.ci-dbs.net/)
-- add hour email address in the input field and submit the form
+- add email address in the input field and submit the form
 - open database link in your email
 - past database URL in your DATABASE_URL variable in env.py file and in Heroku config vars
 
 ## Deploying to Heroku
 
 - Head back over to [Heroku](https://www.heroku.com) and click on your app and then go to the Settings tab
-- On the settings page scroll down to the config vars section and enter the DATABASE_URL which you will set equal to the elephantSQL URL, create Secret key this can be anything,  CLOUDINARY_URL this will be set to your cloudinary url and finally Port which will be set to 8000.
+- On the settings page scroll down to the config vars section and enter the DATABASE_URL which you will set equal to the elephantSQL URL, create Secret key this can be anything,  AWS URL this will be set to your AWS url and finally Port which will be set to 8000.
 - Then scroll to the top and go to the deploy tab and go down to the Deployment method section and select Github and then sign into your account.
 - Below that in the search for a repository to connect to search box enter the name of your repository that you created on GitHub and click connect
 - Once it has been connected scroll down to the Manual Deploy and click Deploy branch when it has deployed you will see a view app button below and this will bring you to your newly deployed app.
@@ -505,6 +505,7 @@ Automated Testing file can be found in the [Automated Testing File](onlineshop/r
 
 ## Credits
 
+I'd like to thank Spencer Barriball, my mentor at Code Institute, for giving me valuable guidance and support throught the duration of this project. The majority of my learning came from the Code Institute course content and the Buteaque Ado Walk Through. This allowed me to set our the structure of the site and to create the backbone of the site from which to build. Without this starting point and both the walkthrough course content and the videos, it would have been impossible. I used numerous videos to solve different problems that I faced I used Django 5 By Example book to solve some stripe issues. This book was recommended by my mentor. A constant go to that I use is https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide as suggested by my mentor. I always use https://www.w3schools.com/ as a go to for all code understanding ranging from python to bootstrap to javascript. I used https://learndjango.com/tutorials/customizing-django-404-and-500-error-pages for error pages and other areas of django. A regular go to was https://docs.djangoproject.com/en/5.1/. My standard go to for python is https://docs.python.org/3.12/library/index.html .
 
 
 
@@ -551,5 +552,5 @@ if request.user.is_authenticated:
 
 
 
-    https://websitemockupgenerator.com/
+    
     django 5 By Example
