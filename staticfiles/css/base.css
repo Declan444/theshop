@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -7,10 +8,8 @@ html, body {
 body {
     background: url('../media/horseandfoal.jpg') no-repeat center center fixed;
     background-size: cover;
-    /*height: calc(100vh - 164px);*/
     color: #555;
     font-family: 'Bodoni';
-    
 }
 
 /* from Bulma */
@@ -31,7 +30,7 @@ body {
 }
 
 .shop-now-button {
-    background: #445261 ;
+    background: #445261;
     color: white;
     min-width: 260px;
 }
@@ -51,7 +50,6 @@ body {
     background: white;
     color: #445261;
     border: 1px solid #445261
-    
 }
 
 .text-black {
@@ -100,32 +98,29 @@ body {
 
 /* Add padding to push content down from the top */
 .content-container {
-    padding-top: 50px; 
-    padding-bottom: 50px; 
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 /* Adjust the column layout and initial positioning */
 .col-12.col-lg-6.my-auto {
-    margin: 0 auto !important; 
-    transform: translateY(-100px); 
+    margin: 0 auto !important;
+    transform: translateY(-100px);
 }
 
-
-
-
 .h-100 {
-    height: auto !important; 
-    max-height: 100vh; 
+    height: auto !important;
+    max-height: 100vh;
 }
 
 .weekly-bargain-wrapper {
-    background-color: rgba(255, 255, 255, 0.8); 
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
-    padding: 20px 25px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); 
-    margin-top: 30px; 
+    padding: 20px 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    margin-top: 30px;
     margin-bottom: 50px;
-    max-width: 350px; 
+    max-width: 350px;
     margin-right: auto;
 }
 
@@ -134,44 +129,45 @@ body {
     color: #445261;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 1.8rem; 
+    font-size: 1.8rem;
     text-align: center;
 }
+
 .weekly-bargain-content h3 {
     color: #445261;
     font-size: 1.2rem;
     margin-top: 15px;
-    text-align: center; 
+    text-align: center;
 }
 
 .weekly-bargain-content p {
     color: #445261;
     margin-bottom: 15px;
-    text-align: center; /* Centered for consistency */
+    text-align: center;
+    /* Centered for consistency */
 }
 
 /* Primary Button Styling */
 .weekly-bargain-content .btn-primary {
     background-color: #445261;
-    border-color: #445261;
-    color: #fff; 
-    transition: background-color 0.3s ease, color 0.3s ease; 
-    padding: 10px 20px; 
-    font-size: 1rem; 
-    border-radius: 5px; 
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
 }
 
 .weekly-bargain-content .btn-primary:hover {
-    background-color: white; 
-    border-color: #445261; 
-    color: #445261; 
+    background-color: white;
+    border-color: #445261;
+    color: #445261;
 }
 
 /* Shop Now Button */
 .shop-now-button {
-    margin-top: 30px; 
+    margin-top: 30px;
     font-size: 1rem;
-    padding: 12px 20px; 
+    padding: 12px 20px;
     border-radius: 5px !important;
     background-color: #445261;
     color: #fff;
@@ -205,9 +201,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f0f0f0; 
-    border-radius: 50%;       
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btt-link,
@@ -216,7 +212,7 @@ body {
     cursor: pointer;
 }
 
-input[name='q']::placeholder  {
+input[name='q']::placeholder {
     color: #445261;
 }
 
@@ -227,9 +223,10 @@ input[name='q']::placeholder  {
     background: #445261;
     color: white !important;
 }
+
 /* Toast CSS */
 .message-container {
-    background-color:white;
+    background-color: white;
     color: black;
     position: fixed;
     top: 10px;
@@ -248,10 +245,10 @@ input[name='q']::placeholder  {
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
+    border-right: 4px solid transparent;
     border-bottom: 10px solid black;
     position: absolute;
     top: -10px;
@@ -319,37 +316,33 @@ input[name='q']::placeholder  {
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-	/* btn */
-	display: inline-block;
+    /* btn */
+    display: inline-block;
     font-weight: 400;
     color: #fff;
     text-align: center;
     vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     background-color: #445261;
-    
+
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 10px;
 
     /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
-	color: #445261;
+.allauth-form-inner-content input[type='submit']:hover {
+    color: #445261;
     background-color: white;
     border-color: #445261;
-;
 }
 
 .allauth-form-inner-content a {
-	color: #445261; 
+    color: #445261;
 }
 
 /* Product Form */
@@ -376,18 +369,17 @@ input[name='q']::placeholder  {
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: #dc3545;
-    border-color: #dc3545;
     border-radius: 0;
 }
 
 /* Responsive adjustments */
 @media (max-width: 991px) {
-    
+
     .navbar-nav .nav-item::after {
         display: none;
 
     }
-    
+
     .dropdown-menu {
         opacity: 1;
         transform: none;
@@ -395,16 +387,16 @@ input[name='q']::placeholder  {
         box-shadow: none;
     }
 
-   
+
 }
 
 /*  Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+    .container {
+        max-width: 80%;
+    }
 }
 
 
@@ -428,7 +420,9 @@ input[name='q']::placeholder  {
 
 /* Adjust layout on large screens */
 @media (min-width: 992px) {
-    .shop-now-container, .weekly-bargain-container {
+
+    .shop-now-container,
+    .weekly-bargain-container {
         margin-bottom: 20px;
     }
 }
@@ -466,42 +460,44 @@ input[name='q']::placeholder  {
     .btn.btn-outline-black.rounded-0,
     .btn.btn-black.rounded-0 {
         padding: .375rem .375rem;
-        
+
     }
 
     .btn.btn-outline-black.rounded-0.btn-lg,
     .btn.btn-black.rounded-0.btn-lg {
         padding: .375rem .375rem;
         font-size: .75rem;
-        
+
     }
 
-    .increment-qty, .decrement-qty {
+    .increment-qty,
+    .decrement-qty {
         padding: .25rem .5rem !important;
     }
 }
 
 /* Push the content down from the header */
-.review-comment-container {   
-    
+.review-comment-container {
+
     padding-top: 10px;
 }
 
 /* Align the outline with the background */
 .review-container {
     background: rgba(255, 255, 255, 0.8);
-    border: 2px solid #445261; 
-    border-radius: 10px; 
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
-    max-width: 1200px; 
+    border: 2px solid #445261;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
 }
 
 /* Style individual card bodies */
 .custom-border {
-    border: 1px solid #445261; 
-    border-radius: 5px; 
-    padding: 20px; 
+    border: 1px solid #445261;
+    border-radius: 5px;
+    padding: 20px;
 }
+
 .text-white {
     color: white;
 }
@@ -509,39 +505,42 @@ input[name='q']::placeholder  {
 /* Adjust spacing for mobile and large screens */
 @media (min-width: 992px) {
     .review-comment-container {
-        margin-top: 120px; 
+        margin-top: 120px;
     }
 }
 
 @media (min-width: 426px) {
     .review-comment-container {
-        margin-top: 200px; 
+        margin-top: 200px;
     }
 }
 
 
 /* review page styling */
 .review-container {
-    max-width: 600px; 
+    max-width: 600px;
     margin-top: 10px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.8); 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary {
-    color: white; 
-    
+    color: white;
+
 }
+
 /* delete confirmation message */
 .delete-container {
-    margin-top: 300px !important; 
+    margin-top: 300px !important;
 }
 
 @media (min-width: 996px) {
-    .h1, h1 {
-        
+
+    .h1,
+    h1 {
+
         margin-top: 120px;
         color: #445261;
     }
@@ -558,26 +557,33 @@ input[name='q']::placeholder  {
 
     /* Flexbox for alignment */
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: flex-start; /* Align items to the top */
-    align-items: center; /* Center horizontally */
-    
-    height: 300px; /* Adjust height to fit your design */
-    box-sizing: border-box; /* Include padding in height */
+    flex-direction: column;
+    /* Stack elements vertically */
+    justify-content: flex-start;
+    /* Align items to the top */
+    align-items: center;
+    /* Center horizontally */
+
+    height: 300px;
+    /* Adjust height to fit your design */
+    box-sizing: border-box;
+    /* Include padding in height */
 }
 
 .loyalty-points-container h1,
 .loyalty-points-container p {
-    margin: 0; /* Remove any default margins on child elements */
-    padding: 10px 0; /* Add padding if needed for spacing */
+    margin: 0;
+    /* Remove any default margins on child elements */
+    padding: 10px 0;
+    /* Add padding if needed for spacing */
 }
 
 /* Footer styling */
 
 .container {
-    min-height: 20vh; 
+    min-height: 20vh;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 footer.custom-white {
@@ -587,32 +593,36 @@ footer.custom-white {
     z-index: 10;
     color: white !important;
     border-top: 1px solid #ccc !important;
-    margin-top: auto; 
-    padding: 10px; 
+    margin-top: auto;
+    padding: 10px;
 }
 
+a.footer.custom-white {
+    
+    color: white !important;
+    
+}
 /* Ensure footer is pushed down with flexbox layout */
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; 
-    margin: 0; 
+    min-height: 100vh;
+    margin: 0;
 }
 
 /* Main content area */
 main {
-    flex: 1; 
+    flex: 1;
 }
 
 .custom-edit-btn {
-    background-color: #445261 !important; 
-    border-color: #445261 !important;    
-    color: white !important; 
-    border-radius: 5px !important;           
+    background-color: #445261 !important;
+    color: white !important;
+    border-radius: 5px !important;
 }
 
 .custom-edit-btn:hover {
-    background-color: white !important; 
+    background-color: white !important;
     border-color: #445261 !important;
     color: #445261 !important;
 }
@@ -620,45 +630,44 @@ main {
 /* Contact Form styling */
 
 .custom-contact-btn {
-    background-color: #445261 !important; 
-    border-color: #445261 !important;    
+    background-color: #445261 !important;
     color: white !important;
-    border-radius: 5px !important;            
+    border-radius: 5px !important;
 }
 
 .custom-contact-btn:hover {
-    background-color: white !important; 
+    background-color: white !important;
     color: #445261 !important;
 }
 
 /* Form wrapper styling */
 .contact-form-wrapper {
-    background-color: rgba(250, 250, 250, 0.8); 
+    background-color: rgba(250, 250, 250, 0.8);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 80px; 
+    margin-top: 80px;
 }
 
 /* Message field styling */
 textarea {
-    height: 100px !important; 
-    resize: vertical;       
+    height: 100px !important;
+    resize: vertical;
 }
 
 /* Adjust form margins to fit nicely inside the wrapper */
 .contact-form {
-    margin: 0; 
+    margin: 0;
 }
 
 /* Ensure the form is positioned properly under the header */
 .contact-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; 
+    justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
-    padding-top: 20px; 
+    padding-top: 20px;
 }
 
 /* Optional: To add some spacing between the form and other elements */
@@ -668,13 +677,13 @@ textarea {
 
 /* Optional: Header title spacing adjustments */
 .page-title {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 /* Add space for larger screens (above 995px) */
 @media (min-width: 996px) {
     .container {
-        margin-top: 50px; 
+        margin-top: 50px;
     }
 }
 
@@ -682,11 +691,11 @@ textarea {
 /* Footer link styling */
 footer.custom-white .footer-link {
     color: white;
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 footer.custom-white .footer-link:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
 @media (max-width:456px) {
@@ -714,7 +723,7 @@ footer.custom-white .footer-link:hover {
     display: flex;
     align-items: center;
     gap: 10px;
-    
+
 }
 
 .newsletter-signup label {
@@ -740,7 +749,7 @@ footer.custom-white .footer-link:hover {
     background-color: #445261;
     color: white;
     border: 2px solid white;
-    
+
 }
 
 .messages {
@@ -755,36 +764,36 @@ footer.custom-white .footer-link:hover {
 }
 
 .suscribe-text-white {
-    color: #ffffff; 
-    font-weight: bold; 
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .newsletter-signup .form-group {
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 .newsletter-signup .form-control {
-    flex: 1; 
-    margin-right: 10px; 
-    margin-bottom: 0; 
+    flex: 1;
+    margin-right: 10px;
+    margin-bottom: 0;
 }
 
 .newsletter-signup .custom-primary-btn {
-    flex-shrink: 0; 
-    margin-top: 0; 
+    flex-shrink: 0;
+    margin-top: 0;
 }
 
 @media (max-width: 576px) {
     .newsletter-signup .form-group {
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     .newsletter-signup .form-control {
-        margin-right: 0; 
-        margin-bottom: 10px; 
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 
     .newsletter-signup .custom-primary-btn {
@@ -797,16 +806,16 @@ footer.custom-white .footer-link:hover {
 }
 
 .col-md-6 {
-    
+
     margin-bottom: 10px !important;
-    
+
 }
 
 .custom-select {
     border-radius: 20px !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8) !important;
     background-color: rgba(250, 250, 250, 0.6) !important;
-   
+
 }
 
 .card {
@@ -820,7 +829,7 @@ footer.custom-white .footer-link:hover {
     border-radius: 20px !important;
     overflow: hidden !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8) !important;
-    
+
 }
 
 .shopping-bag-img {
@@ -835,49 +844,49 @@ footer.custom-white .footer-link:hover {
 }
 
 .card {
-    height: 100%; 
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 .card-img-top {
-    height: 280px; 
-    object-fit: cover; 
+    height: 280px;
+    object-fit: cover;
 }
 
 .card-body {
-    flex-grow: 1; 
-    text-align: center; 
+    flex-grow: 1;
+    text-align: center;
 }
 
 .card-footer {
-    background-color: white; 
+    background-color: white;
 }
 
 /* Make images larger */
 /* When hovering over the card, scale the container and the image */
 .product-container .card:hover {
-    transform: scale(1.6); 
+    transform: scale(1.6);
     transition: transform 0.3s ease-in-out;
-    z-index: 10; 
-    position: relative; 
+    z-index: 10;
+    position: relative;
 }
 
 .product-container .card:hover .card-img-top {
-    transform: scale(1.5); 
-    transition: transform 0.3s ease-in-out; 
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Default styles for the card and image */
 .card {
-    transition: transform 0.3s ease-in-out; 
+    transition: transform 0.3s ease-in-out;
 }
 
 .card-img-top {
     display: block;
     margin: auto;
-    transition: transform 0.3s ease-in-out; 
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Signout button styling */
