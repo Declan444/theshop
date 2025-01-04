@@ -349,88 +349,8 @@ I followed along with the CI videos and the SEO words are included in the site. 
 I followed the same idea for marketing as with SEO and used questions from CI learning platform to help:
 A facebook page was created and can be viewed at: [Equestrian Online Facebook Page](https://www.facebook.com/profile.php?id=61569843507861)
 
-# **Business Model, SEO & Marketing**
 
-## **Business Model**
 
-Bling It operates as a B2C (Business-to-Consumer) ecommerce model, an online retail platform for individual clients specializing in high-quality gemstones. Business model revolves around offering a curated selection of exquisite, ethically-sourced gemstones, including rubies, sapphires, emeralds, and diamonds, catering to a discerning clientele seeking luxury, elegance and uniqueness. By maintaining direct relationships with reputable gemstone suppliers and artisans, shop ensures the authenticity and superior quality of the gemstones offered.<br>
-The target audience include affluent individuals, collectors, and connoisseurs of gemstones, typically aged 30 and above, who seek unique and timeless pieces to complement their personal style and celebrate special occasions. We also target professional women and men who appreciate the elegance and craftsmanship of bespoke jewelry, as well as young couples looking for exquisite engagement ring and wedding band gemstones. Additionally, Bling It appeals to gift-givers who desire to present their loved ones with meaningful and luxurious gifts. Audience is geographically diverse, with a strong presence in major metropolitan areas and an appreciation for online shopping convenience and high quality service.
-
-## **SEO**
-
-SEO, or Search Engine Optimization, is the process of improving your website to increase its visibility when people search for products or services related to your business on search engines like Google. The better visibility your pages have in search results, the more likely you are to attract attention and draw prospective and existing customers to your business. All search in Google was done in incognito window.
-I didn't use [Wordtracker](https://www.wordtracker.com/search) as suggested in lessons as I heard pretty bad reviews about it and wasn't willing to pay to check it myself. For keyword research purposes I used [Keyword Surfer](https://surferseo.com/keyword-surfer-extension/) Chrome extension and checked search results directly in Google Tools. I have included a brain dump using keywords and Google to return a list of long and short-tail keywords. All screenshots can be found in [SEO](static/docs/seo) folder. Below I have added tables created so search results are better visible:
-
-<details><summary>Search results</summary><img src="static/docs/seo/search-table.png"></details>
-<details><summary>Search results</summary><img src="static/docs/seo/search-table2.png"></details>
-
-After concluding my research I added descriptive meta tags to the project.
-
-To improve content I used questions from Content Challenge on CI learning platform: 
-
-* ***What do your users need?***<br>
-Users need high-quality gemstones, detailed product information, safe way to pay and reliable customer service.
-
-* ***What information and features can you provide to meet those needs?***<br>
-Provide detailed product descriptions, high-resolution images, user reviews, a secure checkout process, and a comprehensive FAQ section.
-
-* ***How can you make the information easy to understand?***<br>
-Use clear and concise language, bullet points for key information, and visual aids like images and videos.
-
-* ***How can you demonstrate expertise, authoritativeness, and trustworthiness in your content?***<br>
-Include detailed product information, customer testimonials, expert blog posts, and certifications or awards.
-
-* ***Would there be other pages within your own site you could link to from your chosen page?***<br>
-Yes, link to related products, customer reviews, privacy policy, and the FAQ section.
-
-* ***Are there opportunities to link back to external websites that already rank highly on Google?***<br>
-Yes, link to industry authority sites and gemstone certification bodies.
-
-* ***How can you help users discover other relevant parts of your web application?***<br>
-Use related product suggestions, internal linking, clear navigation menus, and a search function.
-
-## **Marketing**
-
-I followed the same idea for marketing as with SEO and used questions from CI learning platform to help:
-
-* ***Who are your users?***<br>
-Users are gemstone enthusiasts, jewelry collectors, and individuals looking for unique, high-quality gemstones.
-
-* ***Which online platforms would you find lots of your users?***<br>
-Users can be found on social media platforms (my personal favourite Instagram, Pinterest and Facebook for ads), gemstone forums, and jewelry-related websites.
-
-* ***Would your users use social media? If yes, which platforms do you think you would find them on?***<br>
-Yes, users would likely be active on Instagram, Pinterest, and Facebook due to the visual nature of gemstones.
-
-* ***What do your users need? Could you meet that need with useful content? If yes, how could you best deliver that content to them?***<br>
-Users need detailed product information, safe payment option, great customer service, buying guides and care tips, social media updates, and newsletters. 
-    - **Detailed product information** will be included on gemstone detail page.
-    - **Safe payment option** will be achieved by using Stripe and contact form created/ contact details added to ensure outstanding customer service.
-    - **Buying guides** and **care tips** could be delivered through future blog posts (unless there is time left during project to create info page/ blog) and small care tip card added with each order delivered.
-    - **Social media updates** would be handled by shop admin until enough income is created to hire content creator for social media accounts. 
-    - **Newsletter** form is visible on Home page of the project. A newsletter can significantly benefit an e-commerce store by keeping customers engaged and informed about new products, promotions, and exclusive offers. It serves as a direct line of communication, fostering customer loyalty and driving repeat business. By sharing valuable content and personalized recommendations, newsletters enhance the shopping experience and keep your brand top-of-mind. Additionally, they provide insights into customer preferences and behaviors, helping to refine marketing strategies and improve overall customer satisfaction.
-
-* ***Would your business run sales or offer discounts? How do you think your users would most like to hear about these offers?***<br>
-Yes, our business could run sales and offer discounts in near future. Users would hear about these offers through email newsletters, social media posts, and website banners.
-
-* ***What are the goals of your business? Which marketing strategies would offer the best ways to meet those goals?***<br>
-The goals are to increase sales, build brand awareness, and retain customers. Effective marketing strategies include content marketing, social media engagement, email marketing, and possible influencer collaborations.
-
-* ***Would your business have a budget to spend on advertising? Or would it need to work with free or low-cost options to market itself?***<br>
-The business would have a modest budget for advertising but would also utilize free or low-cost options such as social media marketing, SEO, and email campaigns. A lot can be done by owner/ admin at the beginning to help with budget, promoting posts on Instagram isn't as expensive as one might think, limits can be set so to keep control of expenses and be evaluated later to see if more budget can be allocated for paid ads on social media. Incredible option for marketing is sharing posts on Instagram and Facebook and creating reels. To achieve quicker follower growth a small giveaway could be created with certain rules set such as:
-    - ***follow us***
-    - ***like and save post***
-    - ***comment on post***
-    - ***tag x amount of friends***
-    - ***share to your story and tag us***
-
-    Additionally we would use Google Ads which are an amazing way to increase brand awareness and help with SEO. Using Google Ads can also help with the use of long-tail keywords and help with the ranking of the site.
-
-* Facebook page was created during development and screenshots can be found below:
-    <details><summary>Facebook Page</summary><img src="static/docs/marketing/facebook-page.png"></details>
-    <details><summary>Welcome Post</summary><img src="static/docs/marketing/welcome-post.png"></details>
-
-    Page can be accessed following this link, unless it's deleted by Facebook due to not being a real bussiness: [Bling It Facebook Page](https://www.facebook.com/profile.php?id=61559857025144)
 
 
 ## Deployment 
