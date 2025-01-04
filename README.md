@@ -232,62 +232,33 @@ The following sitemap gives a visual flow of the Grange Equestrian Site.
 
 
 
-### Database Relationships
+## Database Relationships
 
-#### User to User Profile: One to One.
+### User to User Profile: One to One.
 
 The user can only have one profile that is associated with each specific user. 
 The userprofile model has a onetoonefield with user.
 
-#### User Profile to Order: One to Many.
+### User Profile to Order: One to Many.
 
 The userprofile can have many orders. 
 The order model has a foreign key to user profile.
 
-#### Loyalty Points to User: One to One.
+### Loyalty Points to User: One to One.
 
 The loyalty points model has a one to one relationship with the user. The user can only contain 1 set of loyalty points.
 
-#### Review to User: Many to One.
+### Review to User: Many to One.
 
 The user leave many reviews.
 
-#### Category to Products: One to Many.
+### Category to Products: One to Many.
 
 Each category can have many products.
 
-#### Order to OrderLineItem: One to Many.
+### Order to OrderLineItem: One to Many.
 
 Each order can contain many lineItems. This acts as a bridge between the products and the orders.
-
-### Database Relationships
-
-#### User to User Profile: One to One.
-
-The user can only have one profile that is associated with each specific user. 
-The userprofile model has a onetoonefield with user.
-
-#### User Profile to Order: One to Many.
-
-The userprofile can have many orders. 
-The order model has a foreign key to user profile.
-
-#### Loyalty Points to User: One to One.
-
-The loyalty points model has a one to one relationship with the user. The user can only contain 1 set of loyalty points.
-
-#### Review to User: Many to One.
-
-The user leave many reviews.
-
-#### Category to Products: One to Many.
-
-Each category can have many products.
-
-#### OrderLineItem to Products: One to Many.
-
-Each order line item  can contain only one product but products can be associated with many line items.
-
 
 
 [Go to Table of Contents](#table-of-contents)
@@ -329,166 +300,14 @@ It allowed me to be able to:
     - Deliver working features incrementally
     - Maintain a clear overview of project progress for review when I returned to the project
     
-
-![Kanban Board](onlineshop/readme_assets/images/kanban_board.png)
+![Kanban Board](onlineshop/readme_assets/images/kanban-board.png)
 
 
 ### Business Model, SEO & Marketing
 
-## Business Model
+The Business Mode, SEO and Marketing file can be viewed here
 
-Equestrian Online is an online shop to supply equestrian goods to the equestrian market. The demographic of this market ranges across all ages and across all types. Anyone that has a horse will be in the market for equestrian products. The site is designed to be simple to use for all users and highlights the key products that equestrian users need.
-
-## SEO
-
-I followed along with the CI videos and the SEO words are included in the site. The sites uses discriptions as follows -Shop high-quality equestrian supplies, including saddles, horse riding boots, tack, grooming kits, and more. Affordable prices and fast shipping and keywords as follows - equestrian supplies, horse riding gear, saddles, equestrian clothing, horse blankets, tack and saddlery, horse grooming supplies
-
-Google Search
-horse 2,080,000,000
-equestrian 141,000,000
-saddle 334,000,000
-bridle  30,500,000
-riding boots 177,000,000
-tack 360,000,000
-grooming kits for horses 2,570,000
-horse riding boots 51,5000,000
-horse turnout rugs 1,060,000
-horse saddle 194,000,000
-horse saddle pads 10,400,000
-
-Things to watch for with keyword ranking location, site update, page links, keywords in the title, keywords bolded, pictures on site etc.
-
-Keywords and keyword research
-Keyword research is the processs of finding and analysing search terms that people enter into search engines, with the goal of using that date for SEO or general web marketing - from CI video Keywords
-
-Targeting
-Popularity
-Ranking
-
-Short-Tail Keywords  - more competitive, attract a wider range of users
-Long-Tail  Keywords - more specific, competition is lower
-
-Q1 List of important, relevant topics, based on the equestrian online shop
-General topics to rank highly?
-    Think of the buyer
-    Think of the user persona
-
-See file attached for list of topics and keywords associated with them "attach link here"
-
-Check through the list for relevence, authority and volume. This is the final list "attach link here"
-
-Ideally want to find keywords that are high enough volume but low enough competition to work for the business application
-
-word tracker and google keyword planner but are paid Check out and get an image 
-
-Narrow list of short tail and long tail keywords
-
-SEO implementations in HTML
-Semantic html header, footer, section, article, strong, h1 etc. Text inside a h1 element more important that a h6. Text inside a strong element and em element more important. Be careful not to keyword stuff. Make sure they fit withing the flow of the project and make sense. Implement selected keywords into each page in the semantic tags.
-
-Links to internal and external Navigation and social rel noopener. Link to other relevant websites increase our ranking. Link to equestrian centers for showjumping, the equestrian registered site etc. Words between the anchor tags are important. Images are important and the alt descriptions are important but remember to describe the image.
-
-meta data Title and meta description are very important.
-
-Files to add to the site
-Sitemap.xml and robots.txt
-
-sitemap.xml generated by xml-sitemaps.com at https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap
-managing your sitemap can be carried out here https://support.google.com/webmasters/answer/7451001
-robots.txt file added to root directory
-
-registering a dns registration but needed for a live site to custom domain. 
-Steps
-1. Register with google at google search console. https://search.google.com/search-console/welcome
-2. Check robots.txt for errors. https://support.google.com/webmasters/answer/6062598?hl=en
-
-
-Creating great content for SEO
-Content is King
-Content needs to be 
-Useful
-Well Informed
-Trustworthy
-
-"Keywords will help users find you, but the content of your web pages is what will keep them on your site once they get there" Quote from CI
-
-Google Raters
-Rater Guidelines at https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf
-
-Genuinely useful and engaging
-
-Google Metrics 
-CTR click through Rate
-Bounce Rate how likely a user is to click the back booton
-Dwell Time how longer a user stays 
-Session Time total time user stays on your site
-Pages per Session how many pages the user visits on your site
-
-Ways to improve
-Understand Users
-Professional
-FAQ Page
-Citation Links
-Exmaples by teaching
-Relevant links to other parts of site
-Privacy statement
-Testimonials reviews and ratings
-Quality of media
-
-Questions to ask
-What do the users need?
-What information and features can the site provide to meet those needs?
-How can the site demonstrate expertise, authritativeness and trustworthiness in the content?
-Are there any other links that could have been included?
-Are there opportunities to link back to external websites that already rank highly on Google?
-How can the site help user discover other relevant parts of the web application?
-
-Look at other sites to see what they do.
-
-Web Marketing
-
-Email marketing with mailchimp  mailchimp.com free 
-
-sign up to mailchimp
-Use the free plan
-Set up account
-Mailchimp Dashboard 
-Create a signup form
-Embedded or popup form
-Copy the code into the location on your site and format
-Move script to bottom of the page or into the static/js file
-Move the css to the head or to the base.css file
-Test form and check if the email address is in the mailchimp dashboard
-Can create a newsletter from the mailchimp dashboard
-
-google my business
-register your business  https://www.google.com/business/
-google ads  
-specific targeting, faster results, access to google keyword planner, measure success https://ads.google.com/intl/en_IE/home/?pli=1
-google analytics  
-free service to better understand who visits your site. Free, powerful tool for insights, create custom reports, find out which web marketing strategies are working https://analytics.google.com/analytics/web/provision/#/provision
-
-google skillshop https://skillshop.withgoogle.com/
-
-GDPR Considerations  https://gdpr.eu/
-Collect data. subscribe, order entry, profile entry. 
-"GDPR is the toughest privacy and security law in the world. It imposes obligations onto organisations anywhere in the world, as long as they target or collect data related to people in the UE." CI
-
-Include a privacy policy
-Sample privacy policy included. 
-[privacypolicygenerator.info](https://www.privacypolicygenerator.info/)
-
-facebook pixel  https://developers.facebook.com/docs/meta-pixel
-hotjar  https://www.hotjar.com/
-javascript liberaries for cookie consent  https://www.cssscript.com/tag/gdpr/
-
-
-## Marketing
-
-I followed the same idea for marketing as with SEO and used questions from CI learning platform to help:
-A facebook page was created and can be viewed at: [Equestrian Online Facebook Page](https://www.facebook.com/profile.php?id=61569843507861)
-
-
+[SEO Guide](onlineshop/readme_assets/seo/seo.md)
 
 
 
@@ -565,6 +384,10 @@ Landing Page
 Products Page
 
 ![products page](onlineshop/readme_assets/images/lighthouse-products-page.png)
+
+Lighthouse Best Practices Results
+
+![best practices](onlineshop/readme_assets/images/lighthouse-bestpractices-messages.png)
 
 
 ### JSHint Validator
