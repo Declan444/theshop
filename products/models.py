@@ -22,7 +22,9 @@ class Category(models.Model):
 
 
 class Products(models.Model):
-    """ """
+    """
+     Products Model
+    """
 
     class Meta:
         verbose_name_plural = "Products"
