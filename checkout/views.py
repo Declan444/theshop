@@ -183,14 +183,16 @@ def checkout(request):
 
 def checkout_success(request, order_number):
     """
-    Handle Successful checkouts
+    Handle successful checkouts:
+    - Process order confirmation
+    - Save user profile information if requested
+    - Clear all checkout-related session data
+    - Display success message
     """
     save_info = request.session.get("save_info")
     order = get_object_or_404(Order, order_number=order_number)
-
-    points_to_apply = request.session.get(
-        "points_applied", 0
-    )  # Get applied points, default to 0 if not set
+    
+    points_to_apply = request.session.get("points_applied", 0)
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
@@ -213,17 +215,27 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-    # Use the email from the order instance
+    # Success message
     messages.success(
         request,
         f"Order successfully processed! \
-                    Your order number is {order_number}. A confirmation \
-                    email will be sent to {order.email}.",
+            Your order number is {order_number}. A confirmation \
+            email will be sent to {order.email}.",
     )
 
-    # Clear the shopping bag from the session
-    if "shopping_bag" in request.session:
-        del request.session["shopping_bag"]
+   
+
+    # Clear the bag (using the correct session key)
+    if 'bag' in request.session:
+        del request.session['bag']
+        request.session.modified = True
+        request.session.save()
+
+    # Also clear any related session variables
+    if 'grand_total' in request.session:
+        del request.session['grand_total']
+    if 'points_applied' in request.session:
+        del request.session['points_applied']
 
     context = {
         "order": order,
@@ -231,7 +243,3 @@ def checkout_success(request, order_number):
     }
 
     return render(request, "checkout/checkout_success.html", context)
-
-    # template = 'checkout/checkout_success.html'
-
-    # return render(request, template, context)
