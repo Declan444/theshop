@@ -181,13 +181,13 @@ def checkout(request):
     return render(request, template, context)
 
 
+from django.core.mail import send_mail
+from django.conf import settings
+from django.template.loader import render_to_string
+
 def checkout_success(request, order_number):
     """
-    Handle successful checkouts:
-    - Process order confirmation
-    - Save user profile information if requested
-    - Clear all checkout-related session data
-    - Display success message
+    Handle successful checkouts
     """
     save_info = request.session.get("save_info")
     order = get_object_or_404(Order, order_number=order_number)
@@ -196,11 +196,9 @@ def checkout_success(request, order_number):
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
-        # Attach the user's profile to the order
         order.user_profile = profile
         order.save()
 
-        # Save the user's info
         if save_info:
             profile_data = {
                 "default_phone_number": order.phone_number,
@@ -215,7 +213,33 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-    # Success message
+    # Send confirmation email
+    try:
+        subject = f'Order Confirmation - {order_number}'
+        
+        # Create email body from template
+        email_body = render_to_string(
+            'checkout/confirmation_emails/confirmation_email_body.html',
+            {
+                'order': order,
+                'contact_email': settings.DEFAULT_FROM_EMAIL,
+                'points_applied': points_to_apply,
+            }
+        )
+        
+        # Send the email
+        send_mail(
+            subject,
+            email_body,
+            settings.DEFAULT_FROM_EMAIL,
+            [order.email],
+            fail_silently=False,
+        )
+    except Exception as e:
+        messages.error(request, 
+            f'Sorry, there was an error sending the confirmation email. Please contact us for assistance.')
+        print(f'Email error: {e}')  # For debugging
+
     messages.success(
         request,
         f"Order successfully processed! \
@@ -223,15 +247,11 @@ def checkout_success(request, order_number):
             email will be sent to {order.email}.",
     )
 
-   
-
-    # Clear the bag (using the correct session key)
     if 'bag' in request.session:
         del request.session['bag']
         request.session.modified = True
         request.session.save()
 
-    # Also clear any related session variables
     if 'grand_total' in request.session:
         del request.session['grand_total']
     if 'points_applied' in request.session:
