@@ -212,40 +212,12 @@ def checkout_success(request, order_number):
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
+                
+        messages.success(request, f'Order successfully processed! \
+        Your order number is {order_number}. A confirmation \
+        email will be sent to {order.email}.')
 
-    # Send confirmation email
-    try:
-        subject = f'Order Confirmation - {order_number}'
-        
-        # Create email body from template
-        email_body = render_to_string(
-            'checkout/confirmation_emails/confirmation_email_body.html',
-            {
-                'order': order,
-                'contact_email': settings.DEFAULT_FROM_EMAIL,
-                'points_applied': points_to_apply,
-            }
-        )
-        
-        # Send the email
-        send_mail(
-            subject,
-            email_body,
-            settings.DEFAULT_FROM_EMAIL,
-            [order.email],
-            fail_silently=False,
-        )
-    except Exception as e:
-        messages.error(request, 
-            f'Sorry, there was an error sending the confirmation email. Please contact us for assistance.')
-        print(f'Email error: {e}')  # For debugging
-
-    messages.success(
-        request,
-        f"Order successfully processed! \
-            Your order number is {order_number}. A confirmation \
-            email will be sent to {order.email}.",
-    )
+    
 
     if 'bag' in request.session:
         del request.session['bag']
