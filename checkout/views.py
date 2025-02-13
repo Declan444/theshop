@@ -14,6 +14,8 @@ from .models import Order, OrderLineItem
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from shopping_bag.contexts import shopping_bag_contents
+from django.core.mail import send_mail  
+from django.template.loader import render_to_string
 
 import stripe
 import json
@@ -181,9 +183,7 @@ def checkout(request):
     return render(request, template, context)
 
 
-from django.core.mail import send_mail
-from django.conf import settings
-from django.template.loader import render_to_string
+
 
 def checkout_success(request, order_number):
     """
@@ -212,11 +212,36 @@ def checkout_success(request, order_number):
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
-                
+
         messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
 
+        # Render the email subject from the template
+        subject = render_to_string(
+            'checkout/confirmation_emails/confirmation_email_subject.txt',
+            {'order': order}
+        )
+        # Remove newline characters from the subject
+        subject = ''.join(subject.splitlines())
+
+        # Render the email body from the template
+        body = render_to_string(
+            'checkout/confirmation_emails/confirmation_email_body.txt',
+            {
+                'order': order,
+                'contact_email': settings.DEFAULT_FROM_EMAIL  
+            }
+        )
+
+        # Send the email
+        send_mail(
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,  
+            [order.email],               
+            fail_silently=False,
+        )
     
 
     if 'bag' in request.session:
