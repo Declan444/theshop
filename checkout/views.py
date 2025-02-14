@@ -194,6 +194,8 @@ def checkout_success(request, order_number):
     
     points_to_apply = request.session.get("points_applied", 0)
 
+    final_total = (order.order_total + order.delivery_cost) - points_to_apply
+
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
         order.user_profile = profile
@@ -258,6 +260,7 @@ def checkout_success(request, order_number):
     context = {
         "order": order,
         "points_to_apply": points_to_apply,
+        'grand_total': final_total,
     }
 
     return render(request, "checkout/checkout_success.html", context)
