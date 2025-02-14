@@ -219,7 +219,7 @@ def checkout_success(request, order_number):
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
 
-        """
+    
         # Render the email subject from the template
         subject = render_to_string(
             'checkout/confirmation_emails/confirmation_email_subject.txt',
@@ -245,7 +245,7 @@ def checkout_success(request, order_number):
             [order.email],               
             fail_silently=False,
         )
-    """
+    
 
     if 'bag' in request.session:
         del request.session['bag']
