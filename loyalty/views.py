@@ -53,8 +53,10 @@ def apply_loyalty_points(request):
         grand_total_after_points = grand_total - points_needed
         request.session["grand_total"] = max(grand_total_after_points, 0)
         messages.success(
-            request, f"{points_needed} loyalty points applied successfully!"
-        )
+        request,
+        f"{points_needed} loyalty points applied successfully!",
+        extra_tags="loyalty_success",
+)
         return redirect("checkout")
     messages.error(request, "Invalid request method.")
     print("Invalid request method used.")  # Debug
