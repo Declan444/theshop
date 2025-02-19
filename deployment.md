@@ -9,9 +9,7 @@
     * [**AWS S3 Bucket**](#aws-s3-bucket) 
     
 
-## **Initial Deployment**
 
-### **Create and setup repository**
 
 * Log in your Github account (or register if you don't have one yet) and create a new repository. I use VS Code for all my coding.
 * In repository go to 'Projects' tab and click 'Link a project', select 'Create new project' from dopdown menu.
