@@ -214,8 +214,17 @@ All background imagery is the property of Equestrian Online. The images for the 
 
 
 ### Wireframes
-
+## Main Pages
 ![wireframes](onlineshop/readme_assets/images/wireframes/wireframes.png)
+## Checkout Page
+![wireframes](onlineshop/readme_assets/images/wireframes/checkout_page.png)
+## Detailed Product Page
+![wireframes](onlineshop/readme_assets/images/wireframes/detailed_product_page.png)
+## Detailed Product Page with Success Message
+![wireframes](onlineshop/readme_assets/images/wireframes/detailed_product_page_with_success_message.png)
+## Shopping Bag Page
+![wireframes](onlineshop/readme_assets/images/wireframes/shopping_bag_page.png)
+
 
 ## Information Architecture
 ### Sitemap
