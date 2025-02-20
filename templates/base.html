@@ -134,6 +134,8 @@
           {% elif level == 25 %}
               {% if message.extra_tags == "loyalty_success" %}
                   {% include 'includes/toasts/toast_loyalty_success.html' %}
+              {% elif message.extra_tags == "order_success" %}
+                  {% include 'includes/toasts/toast_order_success.html' %}
               {% else %}
                   {% include 'includes/toasts/toast_success.html' %}
               {% endif %}
