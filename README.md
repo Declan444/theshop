@@ -458,6 +458,11 @@ Manual Testing file for user stories can be found in the [Manual Testing UserSto
 
 Manual Testing file can be found in the [Manual Testing File](onlineshop/readme_assets/testing/manual_testing.md)
 
+### Email Confirmation Image
+
+![Order Success Page](onlineshop/readme_assets/images/order_success_screen.png)
+
+![Email Confirmation](onlineshop/readme_assets/images/confirmation_email_from_order.png)
 
 
 ### Automated Testing

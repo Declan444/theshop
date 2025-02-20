@@ -186,14 +186,10 @@ def checkout(request):
 
 
 def checkout_success(request, order_number):
-    """
-    Handle successful checkouts
-    """
     save_info = request.session.get("save_info")
     order = get_object_or_404(Order, order_number=order_number)
     
     points_to_apply = request.session.get("points_applied", 0)
-
     final_total = (order.order_total + order.delivery_cost) - points_to_apply
 
     if request.user.is_authenticated:
@@ -215,38 +211,34 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-        messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.')
-
     
-        # Render the email subject from the template
-        subject = render_to_string(
-            'checkout/confirmation_emails/confirmation_email_subject.txt',
-            {'order': order}
-        )
-        # Remove newline characters from the subject
-        subject = ''.join(subject.splitlines())
+    messages.success(request, f'Order successfully processed! \
+    Your order number is {order_number}. A confirmation \
+    email will be sent to {order.email}.')
 
-        # Render the email body from the template
-        body = render_to_string(
-            'checkout/confirmation_emails/confirmation_email_body.txt',
-            {
-                'order': order,
-                'contact_email': settings.DEFAULT_FROM_EMAIL  
-            }
-        )
+    subject = render_to_string(
+        'checkout/confirmation_emails/confirmation_email_subject.txt',
+        {'order': order}
+    )
+    subject = ''.join(subject.splitlines())
 
-        # Send the email
-        send_mail(
-            subject,
-            body,
-            settings.DEFAULT_FROM_EMAIL,  
-            [order.email],               
-            fail_silently=False,
-        )
-    
+    body = render_to_string(
+        'checkout/confirmation_emails/confirmation_email_body.txt',
+        {
+            'order': order,
+            'contact_email': settings.DEFAULT_FROM_EMAIL  
+        }
+    )
 
+    send_mail(
+        subject,
+        body,
+        settings.DEFAULT_FROM_EMAIL,
+        [order.email],
+        fail_silently=False,
+    )
+
+    # Clear session data
     if 'bag' in request.session:
         del request.session['bag']
         request.session.modified = True
