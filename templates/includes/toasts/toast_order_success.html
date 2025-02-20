@@ -1,0 +1,30 @@
+<div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
+    <div class="arrow-up arrow-success"></div>
+    <div class="w-100 toast-capper bg-success"></div>
+    <div class="toast-header bg-white text-dark">
+        <strong class="mr-auto">Success!</strong>
+        <button type="button" class="ml-2 mb-1 close text-dark" data-dismiss="toast">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="toast-body bg-white">
+        <div class="row">
+            <div class="col">
+                {{ message }}
+                <hr class="mt-1 mb-3">
+            </div>
+        </div>
+        <!-- Removed the bag details block -->
+        <div class="row">
+            <div class="col">
+                <p class="mt-3 mb-1 text-black">
+                    <strong>Order Total: <span class="float-right">€{{ grand_total|floatformat:2 }}</span></strong>
+                </p>
+                <p class="mt-1 text-black">
+                    Order Number: <strong>{{ order.order_number }}</strong>
+                </p>
+                <!-- Add any other order-specific details as needed -->
+            </div>
+        </div>
+    </div>
+</div>

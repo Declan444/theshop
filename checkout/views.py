@@ -255,4 +255,4 @@ def checkout_success(request, order_number):
         'grand_total': final_total,
     }
 
-    return render(request, "checkout/checkout_success.html", context)
+    return render(request, "checkout/toast_order_success.html", context)
