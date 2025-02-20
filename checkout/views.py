@@ -214,7 +214,7 @@ def checkout_success(request, order_number):
     
     messages.success(request, f'Order successfully processed! \
     Your order number is {order_number}. A confirmation \
-    email will be sent to {order.email}.')
+    email will be sent to {order.email}.', extra_tags="order_success")
 
     subject = render_to_string(
         'checkout/confirmation_emails/confirmation_email_subject.txt',
@@ -255,4 +255,4 @@ def checkout_success(request, order_number):
         'grand_total': final_total,
     }
 
-    return render(request, "includes/toasts/toast_order_success.html", context)
+    return render(request, "checkout/checkout_success.html", context)
